@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: Catamaran, sans-serif;
+}
+
+.show {
+    transform-origin: 40rem;
+    -webkit-transform: 40rem;
+    -moz-transform: 40rem;
+    -ms-transform: 40rem;
+    -o-transform: 40rem;
+}
+
+.hidden {
+    transform-origin: -40rem;
+    -webkit-transform: -40rem;
+    -moz-transform: -40rem;
+    -ms-transform: -40rem;
+    -o-transform: -40rem;
+}
+
+.sidebar1 {
+    position: fixed;
+    width: 40rem;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transition: 3s ease-in all;
+    -webkit-transition: 3s ease-in all;
+    -moz-transition: 3s ease-in all;
+    -ms-transition: 3s ease-in all;
+    -o-transition: 3s ease-in all;
+}
