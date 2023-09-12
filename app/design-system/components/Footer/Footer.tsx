@@ -1,8 +1,8 @@
 
 export default function Footer() {
     return (
-        <div className="container mx-auto">
-            <div className="max-h-full grid grid-cols-4 gap-16">
+        <div className="container mx-auto py-24">
+            <div className="max-h-full grid grid-cols-4 gap-20">
                 <div className="flex flex-wrap justify-start flex-col gap-8">
                     <h4>CUSTOMER SERVICE</h4>
                     <div className="flex flex-wrap justify-start flex-col gap-2 text-hover text-sm">
