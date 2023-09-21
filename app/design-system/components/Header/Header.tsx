@@ -4,7 +4,7 @@ import { IconHeart, IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../shared/logo.png";
-import Register from "../Register";
+import AccountModal from "../AccountModal";
 import Sidebar from "../Sidebar";
 import Menu from "./Menu";
 import Elements from "./popup/Elements";
@@ -53,7 +53,7 @@ export default function Header() {
                             </div>
                         </div>
                         <div>
-                            <Register />
+                            <AccountModal />
                         </div>
                         <div className="hover:text-hover">
                             <IconSearch size={20} />
