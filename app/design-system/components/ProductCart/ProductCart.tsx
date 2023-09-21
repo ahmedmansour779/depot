@@ -1,8 +1,7 @@
 import { ProductsTypes } from "@/app/types";
 import { IconHeartFilled } from "@tabler/icons-react";
 import Link from "next/link";
-import QuickLook from "../Products page/QuickLook";
-
+import QuickLook from "./QuickLook";
 const ratingLength = [1, 2, 3, 4, 5]
 
 export default function ProductCart({ product, isRating }: { product: ProductsTypes, isRating: boolean }) {
@@ -12,13 +11,13 @@ export default function ProductCart({ product, isRating }: { product: ProductsTy
         <Link href={`/products/${product.id}`} className="w-[50%]">
           <img width="100%" height="100%" src={product.image} alt={`${product.title}`} />
         </Link>
-        <div className="absolute hidden bottom-0 w-fit h-[2rem] mx-auto hero-image quick-look">
+        <div className="absolute hidden bottom-0 w-fit h-[2rem] mx-auto quick-look quick-look">
           <div className="h-full"><QuickLook product={product} /></div>
           <button className="bg-[#555] p-2 h-full"><IconHeartFilled style={{ color: "#fff" }} size={15} /></button>
         </div>
       </div>
       <div className="flex flex-col h-[25%] gap-0 py-4 items-center justify-between text-center">
-        <h3 className="text-sm">{product.title}</h3>
+        <h3 className="text-sm uppercase">{product.title}</h3>
         {
           isRating &&
           <div className="flex items-center space-x-1">

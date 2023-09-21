@@ -1,5 +1,5 @@
 import { ProductsTypes } from "@/app/types"
-import ProductCart from "../ProductCart"
+import ProductCart from "../../design-system/components/ProductCart"
 
 export default async function Products() {
     const data = await fetch(`${process.env.REACT_APP_API}?limit=8`)

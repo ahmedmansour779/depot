@@ -31,7 +31,7 @@ export default function Hero() {
                 direction="vertical"
                 centeredSlides={true}
                 spaceBetween={30}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                // autoplay={{ delay: 5000, disableOnInteraction: false }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 loop={true}
@@ -60,15 +60,15 @@ export default function Hero() {
                             <SwiperSlide className='overflow-hidden bg-[#f3f3f3]' key={item.id}>
                                 <div className={`flex flex-row-reverse ${item.id !== 2 && "items-center"} justify-around gap-4 flex-wrap w-full h-full`}>
                                     {item.id === 1 &&
-                                        <div className="md:w-[49%] w-[100%] flex items-center justify-center p-10 hero-image">
+                                        <div className="md:w-[49%] w-[100%] md:h-auto h-[65%] flex items-center justify-center p-10 hero-image">
                                             <Image src={item.image} alt={item.title} className='w-[100%] h-[100%]' />
                                         </div>
                                     }
                                     {
                                         item.id === 2 &&
                                         <div className='w-[49%] flex flex-row flex-nowrap hero-image-reverse'>
-                                            <Image src={item.image} alt={item.title} style={{ width: "50%", height: "50%" }} />
-                                            <Image src={item.image2} alt={item.title} style={{ width: "50%", height: "50%" }} />
+                                            <Image src={item.image} alt={item.title} className='md:h-[50%] h-[100%]' style={{ width: "50%" }} />
+                                            <Image src={item.image2} alt={item.title} className='md:h-[50%] h-[100%]' style={{ width: "50%", height: "50%" }} />
                                         </div>
                                     }
                                     {item.id === 3 &&
@@ -76,9 +76,9 @@ export default function Hero() {
                                             <Image src={item.image} alt={item.title} className='w-[80%] h-[auto]' />
                                         </div>
                                     }
-                                    <div className="w-[49%] flex flex-col items-start justify-end gap-8 pb-[11rem] px-10 hero-text">
-                                        <h1 className='font-bold text-2xl' style={{ letterSpacing: "2px" }}>{item.title}</h1>
-                                        <p className='text-sm text-hover ' >{item.body}</p>
+                                    <div className="md:w-[49%] w-full flex flex-col items-start justify-end gap-8 md:pb-[11rem] pd-[3rem] px-10 hero-text">
+                                        <h1 className='font-bold md:text-2xl text-lg' style={{ letterSpacing: "2px" }}>{item.title}</h1>
+                                        <p className='md:text-sm text-xs text-hover ' >{item.body}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
