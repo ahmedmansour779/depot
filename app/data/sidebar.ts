@@ -6,9 +6,9 @@ import image5 from "../shared/imag5.png"
 import image6 from "../shared/imag6.png"
 import image7 from "../shared/imag7.png"
 import image8 from "../shared/imag8.png"
-import { Image } from '../types/imagesType'
+import { ImageTypes } from '../types'
 
-export const ImagesData: Image = [
+export const sidebar: ImageTypes = [
     {
         id: 1,
         image: image1,

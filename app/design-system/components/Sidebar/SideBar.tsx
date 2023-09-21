@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { ImagesData } from "@/app/data/images";
+import { sidebar } from "@/app/data/sidebar";
 import { IconBrandFacebookFilled, IconBrandInstagram, IconBrandTwitterFilled, IconMenu2, IconX } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 
@@ -16,11 +16,11 @@ export default function Sidebar() {
     }
 
     return (
-        <div>
+        <div className="transition-config">
             <button className="hover:text-hover" onClick={openNavbar}>
                 <IconMenu2 />
             </button>
-            <nav className={`${open ? "show" : "hidden"} sidebar1 bg-primary`}>
+            <nav className={`${open ? "show" : "hidden-sidebar"} w-[45vw] sidebar1 bg-primary z-50`}>
                 <div className=" absolute top-10 right-10 ">
                     <button className="text-white hover:text-hover" onClick={closeNavbar}>
                         <IconX />
@@ -33,7 +33,7 @@ export default function Sidebar() {
                 </div>
                 <div className="w-8/12 mx-auto grid grid-cols-4 place-items-stretch gap-2">
                     {
-                        ImagesData.map((result: { id: number, image: StaticImageData, title: string }) => {
+                        sidebar.map((result: { id: number, image: StaticImageData, title: string }) => {
                             return (
                                 <div key={result.id} className="h-18 overflow-hidden">
                                     <Image src={result.image} style={{ width: "100%", height: "5rem" }} alt={result.title} />

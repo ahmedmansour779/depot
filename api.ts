@@ -1,1 +1,1 @@
-export const api: string = "https://fakestoreapi.com/products"
+// process.env.REACT_APP_API

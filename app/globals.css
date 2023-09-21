@@ -2,35 +2,162 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+    .wrapper {
+        @apply container mx-auto px-2;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Roboto:wght@300&display=swap');
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
 body {
-    font-family: Catamaran, sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .show {
-    transform-origin: 40rem;
-    -webkit-transform: 40rem;
-    -moz-transform: 40rem;
-    -ms-transform: 40rem;
-    -o-transform: 40rem;
+    transform: translateX(0rem);
+    -webkit-transform: translateX(0rem);
+    -moz-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    -o-transform: translateX(0rem);
 }
 
-.hidden {
-    transform-origin: -40rem;
-    -webkit-transform: -40rem;
-    -moz-transform: -40rem;
-    -ms-transform: -40rem;
-    -o-transform: -40rem;
+.hidden-sidebar {
+    transform: translateX(45vw);
+    -webkit-transform: translateX(45vw);
+    -moz-transform: translateX(45vw);
+    -ms-transform: translateX(45vw);
+    -o-transform: translateX(45vw);
+}
+
+.transition-config {
+    transition: all 0.1s ease-in-out !important;
+    -webkit-transition: all 0.1s ease-in-out !important;
+    -moz-transition: all 0.1s ease-in-out !important;
+    -ms-transition: all 0.1s ease-in-out !important;
+    -o-transition: all 0.1s ease-in-out !important;
+}
+
+.showLogin {
+    visibility: visible;
+}
+
+.hiddenLogin {
+    visibility: hidden;
 }
 
 .sidebar1 {
     position: fixed;
-    width: 40rem;
     top: 0;
     right: 0;
     height: 100%;
-    transition: 3s ease-in all;
-    -webkit-transition: 3s ease-in all;
-    -moz-transition: 3s ease-in all;
-    -ms-transition: 3s ease-in all;
-    -o-transition: 3s ease-in all;
+    transition: 0.5s ease-in all;
+    -webkit-transition: 0.5s ease-in all;
+    -moz-transition: 0.5s ease-in all;
+    -ms-transition: 0.5s ease-in all;
+    -o-transition: 0.5s ease-in all;
+}
+
+/* --------------------- */
+
+.modal {
+    font-size: 12px;
+}
+
+.modal>.header {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal>.content {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.modal>.actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+}
+
+/* ------------------- */
+
+.show-button {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.show-button:hover {
+    color: black;
+}
+
+.cart:hover .show-button {
+    display: block !important;
+    opacity: 1;
+}
+
+.cart:hover .quick-look {
+    display: flex;
+}
+
+.cart:hover .hidden-button {
+    display: none !important;
+}
+
+
+/* ------------------------------------------------ */
+
+@media (max-width: 1024px) {
+
+    .header,
+    .header-right {
+        display: none;
+    }
+
+    .menu {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sidebar1 {
+        width: 100vw;
+    }
+
+    .hidden-sidebar {
+        transform: translateX(100vw);
+        -webkit-transform: translateX(100vw);
+        -moz-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+        -o-transform: translateX(100vw);
+    }
 }
