@@ -31,7 +31,7 @@ export default function Hero() {
                 direction="vertical"
                 centeredSlides={true}
                 spaceBetween={30}
-                // autoplay={{ delay: 5000, disableOnInteraction: false }}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 loop={true}

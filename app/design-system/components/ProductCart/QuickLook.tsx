@@ -4,6 +4,7 @@ import { ProductsTypes } from '@/app/types';
 import { Modal } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconHeart, IconX } from '@tabler/icons-react';
+import AddToCart from '../AddToCart';
 
 const ratingLength = [1, 2, 3, 4, 5]
 
@@ -14,8 +15,8 @@ export default function QuickLook({ product }: { product: ProductsTypes }) {
         <>
             <Modal opened={opened} onClose={close} withCloseButton={false} className='relative' size="auto" centered>
                 <button onClick={close} className=' absolute top-4 right-4'><IconX /></button>
-                <div className=' flex flex-row p-8 gap-8'>
-                    <div className='md:w-[50%] w-full h-[50vh] flex justify-center items-center overflow-hidden p-[10rem]'>
+                <div className=' flex flex-row flex-wrap p-8'>
+                    <div className='md:w-[50%] w-full h-[50vh] flex justify-center items-center overflow-hidden 2xl:p-[10rem] lg:p-[8rem] md:p-[4rem] sm:p-[4rem]'>
                         <img style={{ objectFit: "contain" }} className='w-full' src={product.image} />
                     </div>
                     <div className='md:w-[50%] w-full'>
@@ -33,11 +34,7 @@ export default function QuickLook({ product }: { product: ProductsTypes }) {
                             })}
                         </div>
                         <div className='text-hover pt-4'>{product.description}</div>
-                        <div className="flex flex-row items-center p-4 mt-4 transition-config">
-                            <p className="text-hover text-sm mr-10">Quantity</p>
-                            <input defaultValue={1} type="number" className="text-hover w-6" />
-                            <button className="w-fit bg-black hover:opacity-50 text-white text-sm py-4 px-10">ADD TO CART</button>
-                        </div>
+                        <AddToCart />
                         <button className='flex gap-2 mt-8 text-hover hover:text-hover'><IconHeart color='black' size={20} /> ADD TO WISHLIST</button>
                     </div>
                 </div>

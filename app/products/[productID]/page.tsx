@@ -1,8 +1,8 @@
+import AddToCart from "@/app/design-system/components/AddToCart";
 import Footer from "@/app/design-system/components/Footer";
 import ProductCart from "@/app/design-system/components/ProductCart";
 import { ProductsTypes } from "@/app/types";
 import { IconHeart } from "@tabler/icons-react";
-import AddToCart from "./AddToCart";
 import Details from "./Details";
 
 const ratingLength = [1, 2, 3, 4, 5]
