@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Header from './design-system/components/Header'
-import ScrollToTopButton from './design-system/components/ToUp/ToUp'
 import './globals.css'
+import Header from './modules/Header'
+import ScrollToTopButton from './modules/ToUp/ToUp'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -3,7 +3,7 @@
 import { IconHeart, IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../shared/logo.png";
+import logo from "../../shared/logo.png";
 import AccountModal from "../AccountModal";
 import Sidebar from "../Sidebar";
 import Menu from "./Menu";

@@ -27,7 +27,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"app/design-system/components/AccountModal/AccountModal.tsx"
+		"app/modules/AccountModal/AccountModal.tsx"
 	],
 	"exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
-import AddToCart from "@/app/design-system/components/AddToCart";
-import Footer from "@/app/design-system/components/Footer";
-import ProductCart from "@/app/design-system/components/ProductCart";
+import Footer from "@/app/modules/Footer";
+import ProductCart from "@/app/modules/ProductCart";
+import AddToCart from "@/app/modules/AddToCart";
 import { ProductsTypes } from "@/app/types";
 import { IconHeart } from "@tabler/icons-react";
 import Details from "./Details";
