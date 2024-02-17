@@ -41,3 +41,21 @@ export interface RegType {
     email: string;
     isAdmin: boolean;
 }
+
+type user = {
+    isLoggedIn: boolean;
+    name: string;
+    isAdmin: boolean,
+}
+type form = {
+    show: "register" | "login",
+}
+type showPopup = {
+    show: boolean,
+}
+
+export type RootState = {
+    user: user,
+    showForm: form,
+    showPopup: showPopup
+}

@@ -3,7 +3,9 @@
 import { IconHeart, IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Provider } from "react-redux";
 import logo from "../../shared/logo.png";
+import store from "../../store/store";
 import AccountModal from "../AccountModal";
 import Sidebar from "../Sidebar";
 import Menu from "./Menu";
@@ -15,7 +17,7 @@ import Shop from "./popup/Shop";
 export default function Header() {
 
     return (
-        <>
+        <Provider store={store}>
             <div className="wrapper">
                 <div className="flex justify-between w-full py-14 items-center">
                     <div style={{ letterSpacing: "2px" }} className="header flex justify-between gap-10">
@@ -63,7 +65,7 @@ export default function Header() {
                     <Menu />
                 </div>
             </div>
-        </>
+        </Provider>
 
     )
 }

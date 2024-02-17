@@ -1,5 +1,7 @@
+import { logIn } from "@/app/store/slice/formSlice";
 import { RegType } from "@/app/types";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 export default function Register() {
   const [id, setId] = useState("");
@@ -11,6 +13,7 @@ export default function Register() {
   const [notificationErrorPassword, setNotificationErrorPassword] = useState(false);
   const [notificationWarningEmail, setNotificationWarningEmail] = useState(false);
   const [notificationWarningPassword, setNotificationWarningPassword] = useState(false);
+  const dispatch = useDispatch();
 
   const isValidateRegister = (): boolean => {
     let isProceed = true;
@@ -45,6 +48,8 @@ export default function Register() {
         });
         if (!response.ok) {
           throw new Error('Failed to register.');
+        } else {
+          dispatch(logIn())
         }
       } catch (err) {
         setNotificationError(true);
