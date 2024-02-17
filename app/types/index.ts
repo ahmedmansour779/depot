@@ -25,3 +25,19 @@ export type ProductsTypes = {
     };
     image: string;
 }
+
+export type regType = {
+    id: string,
+    name: string,
+    password: string,
+    email: string,
+    isAdmin: boolean
+}
+
+export interface RegType {
+    id: string;
+    name: string;
+    password: string;
+    email: string;
+    isAdmin: boolean;
+}

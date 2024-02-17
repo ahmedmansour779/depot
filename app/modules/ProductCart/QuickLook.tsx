@@ -16,8 +16,8 @@ export default function QuickLook({ product }: { product: ProductsTypes }) {
             <Modal opened={opened} onClose={close} withCloseButton={false} className='relative' size="auto" centered>
                 <button onClick={close} className=' absolute top-4 right-4'><IconX /></button>
                 <div className=' flex flex-row flex-wrap p-8'>
-                    <div className='md:w-[50%] w-full h-[50vh] flex justify-center items-center overflow-hidden 2xl:p-[10rem] lg:p-[8rem] md:p-[4rem] sm:p-[4rem]'>
-                        <img style={{ objectFit: "contain" }} className='w-full' src={product.image} />
+                    <div className='md:w-[50%] w-full h-[50vh] flex justify-center items-center overflow-hidden 2xl:p-[6rem] lg:p-[4rem] sm:p-[2rem]'>
+                        <img style={{ objectFit: "contain" }} className='w-full h-full' src={product.image} />
                     </div>
                     <div className='md:w-[50%] w-full'>
                         <div className='text-black text-xl flex flex-col gap-2 '>

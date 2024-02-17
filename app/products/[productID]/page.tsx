@@ -1,6 +1,6 @@
+import AddToCart from "@/app/modules/AddToCart";
 import Footer from "@/app/modules/Footer";
 import ProductCart from "@/app/modules/ProductCart";
-import AddToCart from "@/app/modules/AddToCart";
 import { ProductsTypes } from "@/app/types";
 import { IconHeart } from "@tabler/icons-react";
 import Details from "./Details";
@@ -10,10 +10,10 @@ const ratingLength = [1, 2, 3, 4, 5]
 export default async function page(props: { params: any }) {
     const productId = props.params.productID
 
-    const data = await fetch(`${process.env.REACT_APP_API}/${productId}`)
+    const data = await fetch(`${process.env.REACT_APP_API}/products/${productId}`)
     const product = await data.json()
 
-    const data2 = await fetch(`${process.env.REACT_APP_API}/?limit=4`)
+    const data2 = await fetch(`${process.env.REACT_APP_API}/products`)
     const products: ProductsTypes[] = await data2.json()
 
     return (
