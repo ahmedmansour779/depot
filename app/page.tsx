@@ -1,3 +1,5 @@
+"use client";
+
 import Footer from "./modules/Footer";
 import ProductsPage from "./modules/ProductsPage";
 import Hero from "./modules/hero/Hero";

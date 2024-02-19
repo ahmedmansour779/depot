@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 @layer {
     .wrapper {
@@ -164,4 +165,20 @@ body {
         -ms-transform: translateX(100vw);
         -o-transform: translateX(100vw);
     }
+}
+
+/* ------------------------------------------------ */
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }

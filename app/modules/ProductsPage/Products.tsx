@@ -2,7 +2,7 @@ import { ProductsTypes } from "@/app/types"
 import ProductCart from "../ProductCart"
 
 export default async function Products() {
-    const data = await fetch(`${process.env.REACT_APP_API}/products`)
+    const data = await fetch(`https://depot-data.onrender.com/products`)
 
     const products: ProductsTypes[] = await data.json()
 

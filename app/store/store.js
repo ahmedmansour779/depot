@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./slice/authSlice";
 import showForm from "./slice/formSlice";
-import showPopup from "./slice/showPopupSlice";
+import translationReducer from './translation/translationSlice';
 
 const store = configureStore({
     reducer: {
         user: userReducer,
         showForm: showForm,
-        showPopup: showPopup
+        translations: translationReducer
     },
 });
 

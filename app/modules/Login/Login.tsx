@@ -1,23 +1,16 @@
 import { logIn } from "@/app/store/slice/authSlice";
-import { RootState } from "@/app/types";
+import { useTrans } from "@/app/store/translation/transFunc";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-type propsType = {
-  close: () => void
-}
-
-export default function Login(props: propsType) {
+export default function Login(props: any) {
   const [email, setUserEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorEmail, setErrorEmail] = useState(false);
   const [errorPassword, setErrorPassword] = useState(false);
   const [errorLogin, setErrorLogin] = useState(false);
   const dispatch = useDispatch();
-  const data = useSelector((state: RootState) => state.user);
-  const router = useRouter();
 
   const validate = () => {
     let result = true;
@@ -57,23 +50,23 @@ export default function Login(props: propsType) {
   return (
     <form className="mt-4 flex flex-col gap-4" onSubmit={handelSubmit}>
       <div className="flex flex-col gap-1">
-        <input onChange={(e) => setUserEmail(e.target.value)} value={email} type="email" placeholder="User Name" className="p-4 text-xs" />
-        {errorEmail && <p className="!text-red-600 text-xs pl-4">The Email is incorrect</p>}
+        <input onChange={(e) => setUserEmail(e.target.value)} value={email} type="email" placeholder={useTrans("userName")} className="p-4 text-xs" />
+        {errorEmail && <p className="!text-red-600 text-xs pl-4">{useTrans("theEmailIsIncorrect")}</p>}
       </div>
       <div className="flex flex-col gap-1">
-        <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder="Password" className="p-4 text-xs" />
-        {errorPassword && <p className="!text-red-600 text-xs pl-4">The password is incorrect</p>}
+        <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder={useTrans("password")} className="p-4 text-xs" />
+        {errorPassword && <p className="!text-red-600 text-xs pl-4">{useTrans("thePasswordIsIncorrect")}</p>}
       </div>
       <div className="flex flex-row gap-2 text-hover text-s">
         <input type="checkbox" />
-        <label>Remember me</label>
+        <label>{useTrans("rememberMe")}</label>
       </div>
       <div className="flex flex-col gap-1">
-        <Link href="/forgot-password"><p className="text-xs text-hover hover:text-primary">Lost Your password?</p></Link>
+        <Link href="/forgot-password"><p className="text-xs text-hover hover:text-primary">{useTrans("LostPassword")}</p></Link>
         <button type="submit" className="w-full bg-black text-white py-4 text-sm hover:opacity-60">
-          LOGIN
+          {useTrans("login")}
         </button>
-        {errorLogin && <p className="!text-red-600 text-xs">connection error</p>}
+        {errorLogin && <p className="!text-red-600 text-xs">{useTrans("connectionError")}</p>}
       </div>
     </form>
   );

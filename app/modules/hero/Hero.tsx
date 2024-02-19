@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +10,10 @@ import 'swiper/css/pagination';
 import '../../style/style.css';
 
 // import required modules
+import { useTrans } from '@/app/store/translation/transFunc';
+import { RootState } from '@/app/types';
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { heroData } from '../../data/hero';
 
@@ -22,9 +25,10 @@ export default function Hero() {
             return '<span class="' + className + '">' + 0 + (index + 1) + '</span>';
         },
     };
+    const lang = useSelector((state: RootState) => state.translations.language)
 
     return (
-        <div className="h-[80vh]">
+        <div className="h-[80vh]" style={{ direction: lang == "ar" ? "rtl" : "ltr" }}>
             <Swiper
                 pagination={pagination}
                 className="mySwiper"
@@ -77,8 +81,10 @@ export default function Hero() {
                                         </div>
                                     }
                                     <div className="md:w-[49%] w-full flex flex-col items-start justify-end gap-8 md:pb-[11rem] pd-[3rem] px-10 hero-text">
-                                        <h1 className='font-bold md:text-2xl text-lg' style={{ letterSpacing: "2px" }}>{item.title}</h1>
-                                        <p className='md:text-sm text-xs text-hover ' >{item.body}</p>
+                                        <h1 className='font-bold md:text-2xl text-lg' style={{ letterSpacing: "2px" }}>{item.id == 1 && useTrans("heroTitle1")}{item.id == 2 && useTrans("heroTitle2")}{item.id == 3 && useTrans("heroTitle3")}</h1>
+                                        <p className='md:text-sm text-xs text-hover ' >
+                                            {item.id == 1 && useTrans("heroBody1")}{item.id == 2 && useTrans("heroBody2")}{item.id == 3 && useTrans("heroBody3")}
+                                        </p>
                                     </div>
                                 </div>
                             </SwiperSlide>

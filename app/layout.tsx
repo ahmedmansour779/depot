@@ -1,8 +1,12 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from './modules/Header'
-import ScrollToTopButton from './modules/ToUp/ToUp'
+"use client";
+
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Provider } from 'react-redux';
+import './globals.css';
+import Header from './modules/Header';
+import ScrollToTopButton from './modules/ToUp/ToUp';
+import store from './store/store';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,19 +20,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="./icon.png" />
         <meta name="author" content="Ahmed Mansour" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
+        <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Almarai:wght@300;400;700;800&family=Cairo:wght@900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
       </head>
-      <body className={inter.className}>
-        <Header />
-        <hr />
-        {children}
-        <hr />
-        <ScrollToTopButton />
-      </body>
+      <Provider store={store}>
+        <body className={inter.className}>
+          <Header />
+          <hr />
+          {children}
+          <hr />
+          <ScrollToTopButton />
+        </body>
+      </Provider>
     </html>
   )
 }

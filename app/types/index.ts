@@ -54,8 +54,52 @@ type showPopup = {
     show: boolean,
 }
 
+export type translations = {
+    ar: string,
+    email: string,
+    en: string,
+    logOut: string,
+    login: string,
+    password: string,
+    register: string,
+    repeatPassword: string,
+    userName: string,
+    home: string,
+    products: string,
+    washList: string,
+    controlBoard: string,
+    profile: string,
+    cart: string,
+    theEmailIsIncorrect: string,
+    thePasswordIsIncorrect: string,
+    rememberMe: string,
+    connectionError: string,
+    LostPassword: string,
+    passwordDoesNotMatch: string,
+    msgPrivacy: string,
+    privacyPolicy: string,
+    errorInRegister: string,
+    welcome: string,
+    msgSidePar: string,
+    followUs: string,
+    heroTitle1: string,
+    heroBody1: string,
+    heroTitle2: string,
+    heroBody2: string,
+    heroTitle3: string,
+    heroBody3: string
+}
+
+export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3";
+
+type language = {
+    language: "ar" | "en",
+    translations: translations
+}
+
 export type RootState = {
     user: user,
     showForm: form,
     showPopup: showPopup
+    translations: language
 }

@@ -1,4 +1,5 @@
 import { logIn } from "@/app/store/slice/formSlice";
+import { useTrans } from "@/app/store/translation/transFunc";
 import { RegType } from "@/app/types";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -61,26 +62,26 @@ export default function Register() {
     <>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4">
-          <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="User Name" className="p-4 text-xs" />
+          <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder={useTrans("userName")} className="p-4 text-xs" />
           <div className="flex flex-col gap-1">
-            <input value={email} onChange={(e) => { setId(e.target.value); setEmail(e.target.value) }} type="email" placeholder="Email" className="p-4 text-xs" />
-            {notificationWarningEmail && <p className="!text-red-600 text-xs pl-4">Please enter a valid email </p>}
+            <input value={email} onChange={(e) => { setId(e.target.value); setEmail(e.target.value) }} type="email" placeholder={useTrans("email")} className="p-4 text-xs" />
+            {notificationWarningEmail && <p className="!text-red-600 text-xs pl-4">{useTrans("theEmailIsIncorrect")}</p>}
           </div>
           <div className="flex flex-col gap-1">
-            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" className="p-4 text-xs" />
-            {notificationWarningPassword && <p className="!text-red-600 text-xs pl-4">Please enter a valid password </p>}
+            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder={useTrans("password")} className="p-4 text-xs" />
+            {notificationWarningPassword && <p className="!text-red-600 text-xs pl-4">{useTrans("thePasswordIsIncorrect")}</p>}
           </div>
           <div className="flex flex-col gap-1">
-            <input value={passwordTwo} onChange={(e) => setPasswordTwo(e.target.value)} type="password" placeholder="Repeat Password" className="p-4 text-xs" />
-            {notificationErrorPassword && <p className="!text-red-600 text-xs pl-4">Password does not match</p>}
+            <input value={passwordTwo} onChange={(e) => setPasswordTwo(e.target.value)} type="password" placeholder={useTrans("repeatPassword")} className="p-4 text-xs" />
+            {notificationErrorPassword && <p className="!text-red-600 text-xs pl-4">{useTrans("passwordDoesNotMatch")}</p>}
           </div>
         </div>
-        <p className="text-hover text-sm leading-relaxed my-2">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#" className="text-black">privacy policy.</a></p>
+        <p className="text-hover text-sm leading-relaxed my-2">{useTrans("msgPrivacy")}<a href="#" className="text-black">{useTrans("privacyPolicy")}</a></p>
         <div className="flex flex-col gap-2">
           <button type="submit" className="w-full bg-black text-white py-4 text-sm hover:opacity-60">
-            REGISTER
+            {useTrans("register")}
           </button>
-          {notificationError && <p className="!text-red-600 text-xs">Error in register</p>}
+          {notificationError && <p className="!text-red-600 text-xs">{useTrans("errorInRegister")}r</p>}
         </div>
       </form>
     </>
