@@ -19,6 +19,7 @@ export type ProductsTypes = {
     title: string;
     price: number;
     description: string;
+    category: string;
     rating: {
         rate: number,
         count: number
@@ -47,12 +48,11 @@ type user = {
     name: string;
     isAdmin: boolean,
 }
+
 type form = {
     show: "register" | "login",
 }
-type showPopup = {
-    show: boolean,
-}
+
 
 export type translations = {
     ar: string,
@@ -97,9 +97,19 @@ type language = {
     translations: translations
 }
 
+
 export type RootState = {
     user: user,
     showForm: form,
-    showPopup: showPopup
-    translations: language
+    translations: language,
+    theme: ThemeState
+}
+
+export interface ThemeState {
+    mode: 'light' | 'dark';
+    colors: {
+        background: string;
+        text: string;
+        button: string;
+    };
 }

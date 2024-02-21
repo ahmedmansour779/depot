@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// const email = localStorage.getItem('email');
+// const password = localStorage.getItem('password');
+// const isAdmin = localStorage.getItem('isAdmin');
+
 const initialState = {
     isLoggedIn: false,
     name: "",

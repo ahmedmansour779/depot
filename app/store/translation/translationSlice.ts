@@ -3,8 +3,8 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import translations from './translations.json';
 
 const initialState = {
-    language: 'ar',
-    translations: translations['ar'],
+    language: 'en',
+    translations: translations['en'],
 };
 
 export const translation = createSlice({
