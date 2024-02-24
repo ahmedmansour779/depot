@@ -34,9 +34,6 @@ export default function Login(props: any) {
           } else {
             if (resp.password === password) {
               dispatch(logIn(resp));
-              localStorage.setItem('email', resp.id)
-              localStorage.setItem('isAdmin', resp.isAdmin)
-              localStorage.setItem('name', resp.name)
               props.close();
             } else {
               setErrorPassword(true);
@@ -61,10 +58,6 @@ export default function Login(props: any) {
       <div className="flex flex-col gap-1">
         <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder={translations.password} className="p-4 text-xs" />
         {errorPassword && <p className="!text-red-600 text-xs pl-4">{translations.thePasswordIsIncorrect}</p>}
-      </div>
-      <div className="flex flex-row gap-2 text-hover text-s">
-        <input type="checkbox" />
-        <label>{translations.rememberMe}</label>
       </div>
       <div className="flex flex-col gap-1">
         <Link href="/forgot-password"><p className="text-xs text-hover hover:text-primary">{translations.LostPassword}</p></Link>

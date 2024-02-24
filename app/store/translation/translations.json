@@ -32,7 +32,14 @@
         "heroTitle2": "PREMIUM COMFORT.",
         "heroBody2": "One lick import feature lets you import the complete Depot demo content with a single mouse click.",
         "heroTitle3": "CONTEMPORARY DESIGN.",
-        "heroBody3": "A large set of beautiful & fully flexible homepage layouts lets you create your website quickly & easily."
+        "heroBody3": "A large set of beautiful & fully flexible homepage layouts lets you create your website quickly & easily.",
+        "all": "all",
+        "womenClothing": "women's clothing",
+        "mensClothing": "men's clothing",
+        "jewelery": "jewelery",
+        "electronics": "electronics",
+        "filter": "filter",
+        "priceRange": "PRICE RANGE"
     },
     "ar": {
         "en": "انجليزي",
@@ -67,6 +74,13 @@
         "heroTitle2": "راحة مميزه.",
         "heroBody2": "تتيح لك ميزة الاستيراد بنقرة واحدة استيراد المحتوى التجريبي الكامل لـ Depot بنقرة واحدة على الماوس.",
         "heroTitle3": "تصميم معاصر.",
-        "heroBody3": "تتيح لك مجموعة كبيرة من تخطيطات الصفحة الرئيسية الجميلة والمرنة تمامًا إنشاء موقع الويب الخاص بك بسرعة وسهولة."
+        "heroBody3": "تتيح لك مجموعة كبيرة من تخطيطات الصفحة الرئيسية الجميلة والمرنة تمامًا إنشاء موقع الويب الخاص بك بسرعة وسهولة.",
+        "all": "الكل",
+        "womenClothing": "ملابس نسائيه",
+        "mensClothing": "ملابس رجاليه",
+        "jewelery": "مجوهرات",
+        "electronics": "إلكترونيات",
+        "filter": "تصنيف",
+        "priceRange": "نطاق السعر"
     }
 }

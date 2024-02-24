@@ -17,7 +17,13 @@ export default function ProductCart({ product, isRating }: { product: ProductsTy
         </div>
       </div>
       <div className="flex flex-col h-[25%] gap-0 py-4 items-center justify-between text-center">
-        <h3 className="text-sm uppercase">{product.title}</h3>
+        <h3 className="text-sm uppercase">
+          {
+            product.title.length >= 37 ?
+              product.title.slice(0, 38) + "..." :
+              product.title
+          }
+        </h3>
         {
           isRating &&
           <div className="flex items-center space-x-1">

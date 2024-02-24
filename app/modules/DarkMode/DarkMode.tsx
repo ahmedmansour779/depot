@@ -12,7 +12,7 @@ export default function DarkMode() {
       {
         mode == "light" ?
           <IconMoonFilled onClick={() => dispatch(darkMode())} /> :
-          <IconSunFilled onClick={() => dispatch(lightMode())} />
+          <IconSunFilled className="text-white" onClick={() => dispatch(lightMode())} />
       }
     </div>
   );

@@ -28,7 +28,8 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"app/modules/AccountModal/AccountModal.tsx",
-		"app/store/translation/transFunc.ts"
+		"app/store/translation/transFunc.ts",
+		"app/store/slice/authSlice.js"
 	],
 	"exclude": ["node_modules"]
 }

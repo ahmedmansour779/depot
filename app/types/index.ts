@@ -87,22 +87,29 @@ export type translations = {
     heroTitle2: string,
     heroBody2: string,
     heroTitle3: string,
-    heroBody3: string
+    heroBody3: string,
+    all: string,
+    womenClothing: string,
+    mensClothing: string,
+    jewelery: string,
+    electronics: string,
+    filter: string,
+    priceRange: string,
 }
 
-export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3";
+export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange";
 
 type language = {
     language: "ar" | "en",
     translations: translations
 }
 
-
 export type RootState = {
     user: user,
     showForm: form,
     translations: language,
-    theme: ThemeState
+    theme: ThemeState,
+    filterPrice: typeValueFilter
 }
 
 export interface ThemeState {
@@ -112,4 +119,10 @@ export interface ThemeState {
         text: string;
         button: string;
     };
+}
+
+export type typeProduct = "" | "men%27s%20clothing" | "jewelery" | "electronics" | "women%27s%20clothing"
+
+export type typeValueFilter = {
+    value: "all" | "0-10" | "10-20" | "20-30" | "30-40" | "+40"
 }
