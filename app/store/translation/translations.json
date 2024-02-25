@@ -63,7 +63,12 @@
         "orderTracking": "Order Tracking",
         "helpSupport": "Help & Support",
         "msgFooter": "AHMED MANSOUR, All Rights Reserved",
-        "followUsWord": "Follow Us"
+        "followUsWord": "Follow Us",
+        "menu": "menu",
+        "search": "search",
+        "language": "arabic",
+        "pages": "pages",
+        "aboutUs": "about us"
     },
     "ar": {
         "en": "انجليزي",
@@ -129,6 +134,11 @@
         "orderTracking": "تتبع الطلب",
         "helpSupport": "ساعد لدعم",
         "msgFooter": "أحمد منصور، جميع الحقوق محفوظة",
-        "followUsWord": "تابعنا"
+        "followUsWord": "تابعنا",
+        "menu": "القائمه",
+        "search": "بحث",
+        "language": "انجليزي",
+        "pages": "صفحات",
+        "aboutUs": "حولنا"
     }
 }

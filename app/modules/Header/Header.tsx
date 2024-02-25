@@ -12,6 +12,7 @@ import DarkMode from "../DarkMode";
 import Sidebar from "../Sidebar";
 import Translation from "../Translation";
 import Menu from "./Menu";
+import Pages from "./popup/Pages";
 
 export default function Header() {
 
@@ -27,12 +28,7 @@ export default function Header() {
                     <Link href="/" className={`hover:text-hover text-xs`}>
                         {translations.home}
                     </Link>
-                    <Link href="/products" className={`hover:text-hover text-xs`}>
-                        {translations.products}
-                    </Link>
-                    <Link href="/washList" className={`hover:text-hover text-xs`}>
-                        {translations.washList}
-                    </Link>
+                    <Pages />
                     {
                         user.isAdmin && <Link href="/ControlBoard" className={`hover:text-hover text-xs`}>{translations.controlBoard}</Link>
                     }
