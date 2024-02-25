@@ -1,10 +1,13 @@
-import { ProductsTypes } from "@/app/types";
+import { ProductsTypes, RootState } from "@/app/types";
 import { IconHeartFilled } from "@tabler/icons-react";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 import QuickLook from "./QuickLook";
 const ratingLength = [1, 2, 3, 4, 5]
 
 export default function ProductCart({ product, isRating }: { product: ProductsTypes, isRating: boolean }) {
+  const { addToCart } = useSelector((state: RootState) => state.translations.translations)
+
   return (
     <div className="flex flex-col gap-6 overflow-hidden h-[30rem] cart">
       <div className=" relative w-fit h-[75%] m-auto flex justify-center items-center overflow-hidden">
@@ -37,7 +40,7 @@ export default function ProductCart({ product, isRating }: { product: ProductsTy
           </div>
         }
         <p className="text-sm text-hover hidden-button">${product.price}</p>
-        <button className="text-sm text-hover !hover:text-black show-button">ADD TO CART</button>
+        <button className="text-sm text-hover !hover:text-black show-button">{addToCart}</button>
       </div>
     </div>
   );

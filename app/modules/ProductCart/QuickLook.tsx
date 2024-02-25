@@ -1,15 +1,17 @@
 "use client";
 
-import { ProductsTypes } from '@/app/types';
+import { ProductsTypes, RootState } from '@/app/types';
 import { Modal } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconHeart, IconX } from '@tabler/icons-react';
+import { useSelector } from 'react-redux';
 import AddToCart from '../AddToCart';
 
 const ratingLength = [1, 2, 3, 4, 5]
 
 export default function QuickLook({ product }: { product: ProductsTypes }) {
     const [opened, { open, close }] = useDisclosure(false);
+    const { addToWishlist, quickLook } = useSelector((state: RootState) => state.translations.translations)
 
     return (
         <>
@@ -35,12 +37,12 @@ export default function QuickLook({ product }: { product: ProductsTypes }) {
                         </div>
                         <div className='text-hover pt-4'>{product.description}</div>
                         <AddToCart />
-                        <button className='flex gap-2 mt-8 text-hover hover:text-hover'><IconHeart color='black' size={20} /> ADD TO WISHLIST</button>
+                        <button className='flex gap-2 mt-8 text-hover hover:text-hover'><IconHeart color='black' size={20} />{addToWishlist}</button>
                     </div>
                 </div>
             </Modal>
 
-            <button onClick={open} className="bg-black text-xs text-white py-1 px-3 h-full">QUICK LOOK</button>
+            <button onClick={open} className="bg-black text-xs text-white py-1 px-3 h-full">{quickLook}</button>
         </>
     );
 }

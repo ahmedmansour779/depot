@@ -95,9 +95,33 @@ export type translations = {
     electronics: string,
     filter: string,
     priceRange: string,
+    addToCart: string,
+    quickLook: string,
+    addToWishlist: string,
+    quantity: string,
+    customerService: string,
+    helpContactUs: string,
+    returnsRefunds: string,
+    termCondition: string,
+    compony: string,
+    whatWeDo: string,
+    availableService: string,
+    latestPost: string,
+    faqs: string,
+    socialMedia: string,
+    twitter: string,
+    instagram: string,
+    faceBook: string,
+    gitHub: string,
+    myAccount: string,
+    checkout: string,
+    orderTracking: string,
+    helpSupport: string,
+    msgFooter: string,
+    followUsWord: string,
 }
 
-export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange";
+export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord";
 
 type language = {
     language: "ar" | "en",
