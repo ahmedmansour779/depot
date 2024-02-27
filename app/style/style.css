@@ -122,4 +122,7 @@
 .about-title-image {
     background: url("../shared/aboutUs/about-title-img.jpg");
     background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
 }
