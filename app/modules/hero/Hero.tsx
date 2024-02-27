@@ -1,6 +1,5 @@
 "use client";
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -9,7 +8,6 @@ import 'swiper/css/pagination';
 
 import '../../style/style.css';
 
-// import required modules
 import { RootState } from '@/app/types';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
@@ -30,7 +28,7 @@ export default function Hero() {
         <div className="h-[80vh]" style={{ direction: language == "ar" ? "rtl" : "ltr" }}>
             <Swiper
                 pagination={pagination}
-                className="mySwiper"
+                className="mySwiper !overflow-hidden"
                 direction="vertical"
                 centeredSlides={true}
                 spaceBetween={30}

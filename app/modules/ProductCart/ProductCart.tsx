@@ -1,3 +1,5 @@
+"use client";
+
 import { ProductsTypes, RootState } from "@/app/types";
 import { IconHeartFilled } from "@tabler/icons-react";
 import Link from "next/link";

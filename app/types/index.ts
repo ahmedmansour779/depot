@@ -124,9 +124,24 @@ export type translations = {
     language: string,
     pages: string,
     aboutUs: string,
+    services: string,
+    history: string,
+    msgTapAboutUs: string,
+    msgTapService: string,
+    msgTapHistory: string,
+    whatTheyReSaying: string,
+    textSayingOne: string,
+    textSayingTwo: string,
+    textSayingThree: string,
+    textSayingOneCustomer: string,
+    textSayingOneCustomerJop: string,
+    textSayingTwoCustomer: string,
+    textSayingTwoCustomerJop: string,
+    textSayingThreeCustomer: string,
+    textSayingThreeCustomerJop: string,
 }
 
-export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord" | "menu" | "search" | "language" | "pages" | "aboutUs";
+export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord" | "menu" | "search" | "language" | "pages" | "aboutUs" | "services" | "history" | "msgTapAboutUs" | "msgTapService" | "msgTapHistory" | "whatTheyReSaying" | "textSayingOne" | "textSayingTwo" | "textSayingThree" | "textSayingOneCustomer" | "textSayingOneCustomerJop" | "textSayingTwoCustomer" | "textSayingTwoCustomerJop" | "textSayingThreeCustomer" | "textSayingThreeCustomerJop";
 
 type language = {
     language: "ar" | "en",

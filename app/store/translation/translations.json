@@ -68,7 +68,22 @@
         "search": "search",
         "language": "arabic",
         "pages": "pages",
-        "aboutUs": "about us"
+        "aboutUs": "about us",
+        "services": "services",
+        "history": "history",
+        "msgTapAboutUs": "Depot Ecommerce is a modern, user-friendly online platform designed to provide customers with a seamless shopping experience. Whether you're a small business owner or a large retailer, Depot Ecommerce offers a range of features to help you manage your online store efficiently and effectively.",
+        "msgTapService": "Ecommerce Platform: Depot Ecommerce provides a robust and customizable ecommerce platform that allows you to create and manage your online store. The platform includes features such as product management, inventory tracking, order processing, and customer management.",
+        "msgTapHistory": "The history of Depot Ecommerce is a story of innovation, growth, and adaptation to the changing landscape of ecommerce. The company was founded in 2010 by a team of founders with a vision to revolutionize the way people shop online.",
+        "whatTheyReSaying": "WHAT THEY’RE SAYING",
+        "textSayingOne": "Depot Ecommerce is an innovative online platform that offers a wide range of services to help businesses create and manage their online stores. With its user-friendly interface, customizable options, and robust features, Depot Ecommerce makes it easy for businesses of all sizes to succeed in the competitive world of ecommerce. Whether you're just starting out or looking to expand your existing online business, Depot Ecommerce has the tools and expertise to help you achieve your goals.",
+        "textSayingTwo": "Depot Ecommerce is a game-changer in the world of online retail. With its cutting-edge technology and comprehensive suite of services, Depot Ecommerce empowers businesses to create and manage their online stores with ease. From website design and development to digital marketing and analytics, Depot Ecommerce offers everything you need to succeed in the fast-paced world of ecommerce. With Depot Ecommerce, the sky's the limit for your online business.",
+        "textSayingThree": "Depot Ecommerce is a dynamic and forward-thinking platform that caters to the diverse needs of online businesses. Offering a seamless blend of innovative technology and intuitive design, Depot Ecommerce enables entrepreneurs to create and manage their online stores with ease. Whether you're a small boutique or a large retailer, Depot Ecommerce provides the tools and support you need to thrive in the competitive ecommerce landscape. With its focus on user experience and customer satisfaction, Depot Ecommerce is the go-to solution for businesses looking to succeed online.",
+        "textSayingOneCustomer": "Kelly Preston",
+        "textSayingOneCustomerJop": "developer",
+        "textSayingTwoCustomer": "Mason Robinson",
+        "textSayingTwoCustomerJop": "Analyst",
+        "textSayingThreeCustomer": "Christine Parker",
+        "textSayingThreeCustomerJop": "UX Designer"
     },
     "ar": {
         "en": "انجليزي",
@@ -139,6 +154,21 @@
         "search": "بحث",
         "language": "انجليزي",
         "pages": "صفحات",
-        "aboutUs": "حولنا"
+        "aboutUs": "حولنا",
+        "services": "خدماتنا",
+        "history": "تاريخنا",
+        "msgTapAboutUs": "متجر ديبوت عبارة عن منصة حديثة وسهلة الاستخدام عبر الإنترنت مصممة لتزويد العملاء بتجربة تسوق سلسة. سواء كنت صاحب شركة صغيرة أو بائع تجزئة كبير، تقدم متجر ديبوت مجموعة من الميزات لمساعدتك في إدارة متجرك عبر الإنترنت بكفاءة وفعالية.",
+        "msgTapService": "منصة التجارة الإلكترونية: توفر متجر ديبوت منصة تجارة إلكترونية قوية وقابلة للتخصيص تتيح لك إنشاء متجرك عبر الإنترنت وإدارته. تتضمن المنصة ميزات مثل إدارة المنتجات وتتبع المخزون ومعالجة الطلبات وإدارة العملاء.",
+        "msgTapHistory": "إن تاريخ متجر ديبوت هو قصة الابتكار والنمو والتكيف مع المشهد المتغير للتجارة الإلكترونية. تأسست الشركة في عام 2010 على يد فريق من المؤسسين الذين لديهم رؤية لإحداث ثورة في طريقة تسوق الأشخاص عبر الإنترنت.",
+        "whatTheyReSaying": "ماذا يقولون؟",
+        "textSayingOne": "متجر ديبوت عبارة عن منصة مبتكرة عبر الإنترنت تقدم مجموعة واسعة من الخدمات لمساعدة الشركات على إنشاء متاجرها عبر الإنترنت وإدارتها. بفضل واجهته سهلة الاستخدام، والخيارات القابلة للتخصيص، والميزات القوية، تسهل متجر ديبوت على الشركات من جميع الأحجام تحقيق النجاح في عالم التجارة الإلكترونية التنافسي. سواء كنت بدأت للتو أو تتطلع إلى توسيع نطاق عملك الحالي عبر الإنترنت، فإن متجر ديبوت لديها الأدوات والخبرة لمساعدتك في تحقيق أهدافك.",
+        "textSayingTwo": "تعد متجر ديبوت بمثابة تغيير جذري في عالم البيع بالتجزئة عبر الإنترنت. بفضل تقنيتها المتطورة ومجموعة الخدمات الشاملة، تعمل متجر ديبوت على تمكين الشركات من إنشاء وإدارة متاجرها عبر الإنترنت بسهولة. من تصميم مواقع الويب وتطويرها إلى التسويق الرقمي والتحليلات، تقدم متجر ديبوت كل ما تحتاجه للنجاح في عالم التجارة الإلكترونية سريع الخطى. مع متجر ديبوت، السماء هي الحد الأقصى لأعمالك التجارية عبر الإنترنت.",
+        "textSayingThree": "تعد متجر ديبوت منصة ديناميكية ومتقدمة تلبي الاحتياجات المتنوعة للشركات عبر الإنترنت. تقدم متجر ديبوت مزيجًا سلسًا من التكنولوجيا المبتكرة والتصميم البديهي، حيث تمكن رواد الأعمال من إنشاء وإدارة متاجرهم عبر الإنترنت بسهولة. سواء كنت متجرًا صغيرًا أو بائع تجزئة كبيرًا، توفر متجر ديبوت الأدوات والدعم الذي تحتاجه للنجاح في مشهد التجارة الإلكترونية التنافسي. من خلال تركيزها على تجربة المستخدم ورضا العملاء، تعد متجر ديبوت الحل الأمثل للشركات التي تتطلع إلى النجاح عبر الإنترنت.",
+        "textSayingOneCustomer": "كيلي بريستون",
+        "textSayingOneCustomerJop": "مطور",
+        "textSayingTwoCustomer": "ميسون روبنسون",
+        "textSayingTwoCustomerJop": "المحلل",
+        "textSayingThreeCustomer": "كريستين باركر",
+        "textSayingThreeCustomerJop": "مصمم تجربة المستخدم"
     }
 }

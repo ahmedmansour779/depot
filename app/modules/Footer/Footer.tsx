@@ -1,13 +1,15 @@
-import { RootState } from "@/app/types"
-import { IconBrandFacebookFilled, IconBrandInstagram, IconBrandTwitterFilled } from "@tabler/icons-react"
-import { useSelector } from "react-redux"
+"use client";
+
+import { RootState } from "@/app/types";
+import { IconBrandFacebookFilled, IconBrandInstagram, IconBrandTwitterFilled } from "@tabler/icons-react";
+import { useSelector } from "react-redux";
 
 export default function Footer() {
     let currentYear = new Date().getFullYear()
     const lang = useSelector((state: RootState) => state.translations.language)
     const { customerService, profile, helpContactUs, returnsRefunds, termCondition, compony, whatWeDo, availableService, latestPost, faqs, socialMedia, twitter, instagram, faceBook, gitHub, myAccount, checkout, orderTracking, helpSupport, msgFooter, followUsWord } = useSelector((state: RootState) => state.translations.translations)
     return (
-        <div className="mt-8" style={{ direction: lang == "ar" ? "rtl" : "ltr" }}>
+        <div style={{ direction: lang == "ar" ? "rtl" : "ltr" }}>
             <div className="w-full flex flex-row justify-center border-y-[1px] border-solid b-[#cecece33] py-20">
                 <div className="wrapper">
                     <div className="max-h-full grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-20">

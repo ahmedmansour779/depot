@@ -34,7 +34,7 @@ export default function Login(props: any) {
           } else {
             if (resp.password === password) {
               dispatch(logIn(resp));
-              props.close();
+              props.setPopup(false);
             } else {
               setErrorPassword(true);
             }
@@ -50,16 +50,18 @@ export default function Login(props: any) {
 
 
   return (
-    <form className="mt-4 flex flex-col gap-4" onSubmit={handelSubmit}>
+    <form className="flex flex-col gap-4" onSubmit={handelSubmit}>
       <div className="flex flex-col gap-1">
-        <input onChange={(e) => setUserEmail(e.target.value)} value={email} type="email" placeholder={translations.email} className="p-4 text-xs" />
-        {errorEmail && <p className="!text-red-600 text-xs pl-4">{translations.theEmailIsIncorrect}</p>}
+        <div className="flex flex-col gap-1">
+          <input onChange={(e) => setUserEmail(e.target.value)} value={email} type="email" placeholder={translations.email} className="p-4 text-xs border-solid border-[1px] border-gray-300 text-black" />
+          {errorEmail && <p className="!text-red-600 text-xs pl-4">{translations.theEmailIsIncorrect}</p>}
+        </div>
+        <div className="flex flex-col gap-1">
+          <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder={translations.password} className="p-4 text-xs border-solid border-[1px] border-gray-300 text-black" />
+          {errorPassword && <p className="!text-red-600 text-xs pl-4">{translations.thePasswordIsIncorrect}</p>}
+        </div>
       </div>
-      <div className="flex flex-col gap-1">
-        <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" placeholder={translations.password} className="p-4 text-xs" />
-        {errorPassword && <p className="!text-red-600 text-xs pl-4">{translations.thePasswordIsIncorrect}</p>}
-      </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         <Link href="/forgot-password"><p className="text-xs text-hover hover:text-primary">{translations.LostPassword}</p></Link>
         <button type="submit" className="w-full bg-black text-white py-4 text-sm hover:opacity-60">
           {translations.login}

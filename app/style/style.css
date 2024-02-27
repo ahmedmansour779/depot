@@ -118,3 +118,8 @@
         display: none;
     }
 }
+
+.about-title-image {
+    background: url("../shared/aboutUs/about-title-img.jpg");
+    background-position: center;
+}
