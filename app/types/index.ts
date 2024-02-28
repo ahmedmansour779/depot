@@ -139,9 +139,17 @@ export type translations = {
     textSayingTwoCustomerJop: string,
     textSayingThreeCustomer: string,
     textSayingThreeCustomerJop: string,
+    whatCanWeDo: string,
+    answerWhatCanWeDo: string,
+    strategyAndTiming: string,
+    msgStrategyAndTiming: string,
+    socialIntegration: string,
+    msgSocialIntegration: string,
+    shoppingExperience: string,
+    msgShoppingExperience: string,
 }
 
-export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord" | "menu" | "search" | "language" | "pages" | "aboutUs" | "services" | "history" | "msgTapAboutUs" | "msgTapService" | "msgTapHistory" | "whatTheyReSaying" | "textSayingOne" | "textSayingTwo" | "textSayingThree" | "textSayingOneCustomer" | "textSayingOneCustomerJop" | "textSayingTwoCustomer" | "textSayingTwoCustomerJop" | "textSayingThreeCustomer" | "textSayingThreeCustomerJop";
+export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord" | "menu" | "search" | "language" | "pages" | "aboutUs" | "services" | "history" | "msgTapAboutUs" | "msgTapService" | "msgTapHistory" | "whatTheyReSaying" | "textSayingOne" | "textSayingTwo" | "textSayingThree" | "textSayingOneCustomer" | "textSayingOneCustomerJop" | "textSayingTwoCustomer" | "textSayingTwoCustomerJop" | "textSayingThreeCustomer" | "textSayingThreeCustomerJop" | "whatCanWeDo" | "answerWhatCanWeDo" | "strategyAndTiming" | "msgStrategyAndTiming" | "socialIntegration" | "msgSocialIntegration" | "shoppingExperience" | "msgShoppingExperience";
 
 type language = {
     language: "ar" | "en",
@@ -170,3 +178,9 @@ export type typeProduct = "" | "men%27s%20clothing" | "jewelery" | "electronics"
 export type typeValueFilter = {
     value: "all" | "0-10" | "10-20" | "20-30" | "30-40" | "+40"
 }
+
+export type typeDataCartsWhatWeDo = {
+    image: StaticImageData;
+    title: string;
+    description: string;
+}[]

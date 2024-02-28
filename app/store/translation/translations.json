@@ -83,7 +83,15 @@
         "textSayingTwoCustomer": "Mason Robinson",
         "textSayingTwoCustomerJop": "Analyst",
         "textSayingThreeCustomer": "Christine Parker",
-        "textSayingThreeCustomerJop": "UX Designer"
+        "textSayingThreeCustomerJop": "UX Designer",
+        "whatCanWeDo": "WHAT CAN WE DO FOR YOU?",
+        "answerWhatCanWeDo": "At Depot Ecommerce, we provide everything you need to succeed online. From user-friendly website design to powerful marketing tools, our team is here to support you every step of the way. What can we do for you today?",
+        "strategyAndTiming": "STRATEGY AND TIMING",
+        "msgStrategyAndTiming": "Crafting the right strategy and timing is key to achieving your goals. We'll work with you to develop a tailored approach that maximizes results and ensures success.",
+        "socialIntegration": "SOCIAL INTEGRATION",
+        "msgSocialIntegration": "Connect with your audience like never before. Our social integration features make it easy to engage with customers and grow your brand across social media platforms.",
+        "shoppingExperience": "SHOPPING EXPERIENCE",
+        "msgShoppingExperience": "Elevate your shopping experience with us. Discover a seamless and enjoyable way to browse, shop, and interact with your favorite brands."
     },
     "ar": {
         "en": "انجليزي",
@@ -169,6 +177,14 @@
         "textSayingTwoCustomer": "ميسون روبنسون",
         "textSayingTwoCustomerJop": "المحلل",
         "textSayingThreeCustomer": "كريستين باركر",
-        "textSayingThreeCustomerJop": "مصمم تجربة المستخدم"
+        "textSayingThreeCustomerJop": "مصمم تجربة المستخدم",
+        "whatCanWeDo": "ماذا يمكننا أن نفعل لك؟",
+        "answerWhatCanWeDo": "في متجر ديبوت، نقدم كل ما تحتاجه لتحقيق النجاح عبر الإنترنت. بدءًا من تصميم مواقع الويب سهلة الاستخدام وحتى أدوات التسويق القوية، فريقنا موجود لدعمك في كل خطوة على الطريق. ماذا يمكننا أن نفعل لك اليوم؟",
+        "strategyAndTiming": "الاستراتيجية والتوقيت",
+        "msgStrategyAndTiming": "إن صياغة الإستراتيجية والتوقيت المناسبين هو المفتاح لتحقيق أهدافك. سنعمل معك لتطوير نهج مخصص لتحقيق أقصى قدر من النتائج ويضمن النجاح.",
+        "socialIntegration": "الاندماج الاجتماعي",
+        "msgSocialIntegration": "تواصل مع جمهورك كما لم يحدث من قبل. تسهل ميزات التكامل الاجتماعي لدينا التفاعل مع العملاء وتنمية علامتك التجارية عبر منصات التواصل الاجتماعي.",
+        "shoppingExperience": "خبرة التسوق",
+        "msgShoppingExperience": "ارفع تجربة التسوق الخاصة بك معنا. اكتشف طريقة سلسة وممتعة للتصفح والتسوق والتفاعل مع العلامات التجارية المفضلة لديك."
     }
 }
