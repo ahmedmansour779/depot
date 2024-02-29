@@ -19,7 +19,7 @@ export default function QuickLook({ product }: { product: ProductsTypes }) {
     return (
         <>
             <div style={{ display: open == true ? "flex" : "none" }} className="fixed w-[100vw] h-[100vh] left-0 top-0 justify-center items-center bg-[#000000a6] z-[1000] ">
-                <div className='p-4 bg-white lg:w-[80vw] md:w-[90vw] bigTablet:w-[90vw] w-[95vw] h-[95vh] relative overflow-y-scroll'>
+                <div className='p-4 bg-white lg:w-[80vw] md:w-[90vw] bigTablet:w-[90vw] w-[95vw] max-h-[95vh] relative overflow-y-scroll'>
                     <button onClick={() => setOpen(false)} className=' absolute top-4 right-4'><IconX /></button>
                     <div className=' flex flex-row flex-wrap p-8'>
                         <div className='md:w-[50%] w-full h-[50vh] flex justify-center items-center overflow-hidden 2xl:p-[6rem] lg:p-[4rem] sm:p-[2rem]'>
