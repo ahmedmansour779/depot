@@ -14,7 +14,16 @@ import TranslationSideBar from "../TranslationSideBar";
 
 export default function Menu() {
     const [openSidebar, setSidebar] = useState<boolean>(false)
-    const { home, menu, cart, login, search, language, pages, aboutUs } = useSelector((state: RootState) => state.translations.translations)
+    const {
+        home,
+        menu,
+        cart,
+        login,
+        search,
+        pages,
+        aboutUs,
+        washList
+    } = useSelector((state: RootState) => state.translations.translations)
     const lang = useSelector((state: RootState) => state.translations.language)
 
     const openNavbar = () => {
@@ -47,11 +56,13 @@ export default function Menu() {
                         <Link href="/search">{search}</Link>
                         <TranslationSideBar />
                     </div>
-                    <Accordion open={open === 1}>
-                        <AccordionHeader className="text-white" onClick={() => handleOpen(1)}>{pages}</AccordionHeader>
+                    <Accordion placeholder="test" open={open === 1}>
+                        <AccordionHeader placeholder="test" className="text-white" onClick={() => handleOpen(1)}>{pages}</AccordionHeader>
                         <AccordionBody>
                             <div className="flex flex-col gap-1.5">
                                 <Link href="/about-us">{aboutUs}</Link>
+                                <Link href="/whatWeDo">{aboutUs}</Link>
+                                <Link href="/washList">{washList}</Link>
                             </div>
                         </AccordionBody>
                     </Accordion>

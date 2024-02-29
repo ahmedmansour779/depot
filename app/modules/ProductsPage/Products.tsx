@@ -14,7 +14,6 @@ export default function Products(props: propsType) {
 
     const [products, setProducts] = useState<ProductsTypes[]>([]);
     const valuePrice = useSelector((state: RootState) => state.filterPrice.value)
-
     useEffect(() => {
         const fetchData = async () => {
             try {

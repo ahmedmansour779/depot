@@ -11,7 +11,11 @@ import Popup from 'reactjs-popup';
 export default function Pages() {
     const [show, setShow] = useState(false);
     const target = useRef(null);
-    const { aboutUs, pages, whatWeDo } = useSelector((state: RootState) => state.translations.translations)
+    const {
+        aboutUs,
+        pages,
+        whatWeDo,
+        washList } = useSelector((state: RootState) => state.translations.translations)
     const lang = useSelector((state: RootState) => state.translations.language)
 
 
@@ -27,6 +31,7 @@ export default function Pages() {
             >
                 <Link href='/aboutUs' className='hover:text-white'>{aboutUs}</Link>
                 <Link href='/whatWeDo' className='hover:text-white'>{whatWeDo}</Link>
+                <Link href='/washList' className='hover:text-white'>{washList}</Link>
             </motion.div>
         )
     }

@@ -25,6 +25,7 @@ export type ProductsTypes = {
         count: number
     };
     image: string;
+    isFavorite: boolean;
 }
 
 export type regType = {
@@ -41,12 +42,15 @@ export interface RegType {
     password: string;
     email: string;
     isAdmin: boolean;
+    wishList: [];
 }
 
 type user = {
     isLoggedIn: boolean;
     name: string;
     isAdmin: boolean,
+    wishList: ProductsTypes[]
+    id: string;
 }
 
 type form = {

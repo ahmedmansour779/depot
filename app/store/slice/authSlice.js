@@ -5,9 +5,11 @@ import { createSlice } from '@reduxjs/toolkit';
 // const isAdmin = localStorage.getItem('isAdmin');
 
 const initialState = {
+    id: "",
     isLoggedIn: false,
     name: "",
     isAdmin: false,
+    washList: []
 };
 
 const userSlice = createSlice({

@@ -1,9 +1,9 @@
 "use client";
 
 import { ProductsTypes, RootState } from "@/app/types";
-import { IconHeartFilled } from "@tabler/icons-react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import AddToWishlistButton from "../wishList/AddToWishlistButton";
 import QuickLook from "./QuickLook";
 const ratingLength = [1, 2, 3, 4, 5]
 
@@ -18,13 +18,15 @@ export default function ProductCart({ product, isRating }: { product: ProductsTy
         </Link>
         <div className="absolute hidden bottom-0 w-fit h-[2rem] mx-auto quick-look quick-look">
           <div className="h-full"><QuickLook product={product} /></div>
-          <button className="bg-[#555] p-2 h-full"><IconHeartFilled style={{ color: "#fff" }} size={15} /></button>
+          <button className="bg-[#555] p-2 h-full">
+            <AddToWishlistButton product={product} />
+          </button>
         </div>
       </div>
       <div className="flex flex-col h-[25%] gap-0 py-4 items-center justify-between text-center">
         <h3 className="text-sm uppercase">
           {
-            product.title.length >= 37 ?
+            product.title.length >= +37 ?
               product.title.slice(0, 38) + "..." :
               product.title
           }

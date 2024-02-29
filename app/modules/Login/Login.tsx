@@ -34,14 +34,11 @@ export default function Login(props: any) {
           } else {
             if (resp.password === password) {
               dispatch(logIn(resp));
-              props.setPopup(false);
+              props.close(false);
             } else {
               setErrorPassword(true);
             }
           }
-        })
-        .catch((err) => {
-          setErrorEmail(true);
         });
     }
   }
