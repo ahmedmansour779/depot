@@ -49,7 +49,7 @@ type user = {
     isLoggedIn: boolean;
     name: string;
     isAdmin: boolean,
-    wishList: ProductsTypes[]
+    washListNumbers: number | null
     id: string;
 }
 
@@ -151,9 +151,11 @@ export type translations = {
     msgSocialIntegration: string,
     shoppingExperience: string,
     msgShoppingExperience: string,
+    type: string,
+    price: string,
 }
 
-export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord" | "menu" | "search" | "language" | "pages" | "aboutUs" | "services" | "history" | "msgTapAboutUs" | "msgTapService" | "msgTapHistory" | "whatTheyReSaying" | "textSayingOne" | "textSayingTwo" | "textSayingThree" | "textSayingOneCustomer" | "textSayingOneCustomerJop" | "textSayingTwoCustomer" | "textSayingTwoCustomerJop" | "textSayingThreeCustomer" | "textSayingThreeCustomerJop" | "whatCanWeDo" | "answerWhatCanWeDo" | "strategyAndTiming" | "msgStrategyAndTiming" | "socialIntegration" | "msgSocialIntegration" | "shoppingExperience" | "msgShoppingExperience";
+export type keyObj = "ar" | "email" | "en" | "logOut" | "login" | "password" | "register" | "repeatPassword" | "userName" | "home" | "products" | "washList" | "controlBoard" | "profile" | "cart" | "theEmailIsIncorrect" | "thePasswordIsIncorrect" | "rememberMe" | "connectionError" | "LostPassword" | "passwordDoesNotMatch" | "msgPrivacy" | "privacyPolicy" | "errorInRegister" | "welcome" | "msgSidePar" | "followUs" | "heroTitle1" | "heroBody1" | "heroTitle2" | "heroBody2" | "heroTitle3" | "heroBody3" | "all" | "womenClothing" | "mensClothing" | "jewelery" | "electronics" | "filter" | "priceRange" | "addToCart" | "quickLook" | "addToWishlist" | "quantity" | "customerService" | "helpContactUs" | "returnsRefunds" | "termCondition" | "compony" | "whatWeDo" | "availableService" | "latestPost" | "faqs" | "socialMedia" | "twitter" | "instagram" | "faceBook" | "gitHub" | "myAccount" | "checkout" | "orderTracking" | "helpSupport" | "msgFooter" | "followUsWord" | "menu" | "search" | "language" | "pages" | "aboutUs" | "services" | "history" | "msgTapAboutUs" | "msgTapService" | "msgTapHistory" | "whatTheyReSaying" | "textSayingOne" | "textSayingTwo" | "textSayingThree" | "textSayingOneCustomer" | "textSayingOneCustomerJop" | "textSayingTwoCustomer" | "textSayingTwoCustomerJop" | "textSayingThreeCustomer" | "textSayingThreeCustomerJop" | "whatCanWeDo" | "answerWhatCanWeDo" | "strategyAndTiming" | "msgStrategyAndTiming" | "socialIntegration" | "msgSocialIntegration" | "shoppingExperience" | "msgShoppingExperience" | "type" | "price";
 
 type language = {
     language: "ar" | "en",

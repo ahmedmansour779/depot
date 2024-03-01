@@ -91,7 +91,9 @@
         "socialIntegration": "SOCIAL INTEGRATION",
         "msgSocialIntegration": "Connect with your audience like never before. Our social integration features make it easy to engage with customers and grow your brand across social media platforms.",
         "shoppingExperience": "SHOPPING EXPERIENCE",
-        "msgShoppingExperience": "Elevate your shopping experience with us. Discover a seamless and enjoyable way to browse, shop, and interact with your favorite brands."
+        "msgShoppingExperience": "Elevate your shopping experience with us. Discover a seamless and enjoyable way to browse, shop, and interact with your favorite brands.",
+        "type": "type",
+        "price": "price"
     },
     "ar": {
         "en": "انجليزي",
@@ -185,6 +187,8 @@
         "socialIntegration": "الاندماج الاجتماعي",
         "msgSocialIntegration": "تواصل مع جمهورك كما لم يحدث من قبل. تسهل ميزات التكامل الاجتماعي لدينا التفاعل مع العملاء وتنمية علامتك التجارية عبر منصات التواصل الاجتماعي.",
         "shoppingExperience": "خبرة التسوق",
-        "msgShoppingExperience": "ارفع تجربة التسوق الخاصة بك معنا. اكتشف طريقة سلسة وممتعة للتصفح والتسوق والتفاعل مع العلامات التجارية المفضلة لديك."
+        "msgShoppingExperience": "ارفع تجربة التسوق الخاصة بك معنا. اكتشف طريقة سلسة وممتعة للتصفح والتسوق والتفاعل مع العلامات التجارية المفضلة لديك.",
+        "type": "النوع",
+        "price": "السعر"
     }
 }

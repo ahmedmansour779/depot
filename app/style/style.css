@@ -119,10 +119,17 @@
     }
 }
 
+.title-image {
+    background-position: center !important;
+    background-size: cover !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-blend-mode: multiply !important;
+}
+
 .about-title-image {
     background: url("../shared/aboutUs/about-title-img.jpg");
-    background-position: center;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
+}
+
+.washList-title-image {
+    background: url("../shared/faq-title-img.jpg");
 }

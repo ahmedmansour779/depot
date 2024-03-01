@@ -33,7 +33,6 @@ export default function Hero() {
                 centeredSlides={true}
                 spaceBetween={30}
                 autoplay={{ delay: 5000, disableOnInteraction: false }}
-                navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 loop={true}
                 breakpoints={{

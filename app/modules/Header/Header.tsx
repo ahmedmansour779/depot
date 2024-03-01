@@ -18,6 +18,7 @@ export default function Header() {
 
     const user = useSelector((state: RootState) => state.user)
     const { language, translations } = useSelector((state: RootState) => state.translations);
+    const { isLoggedIn, washListNumbers } = useSelector((state: RootState) => state.user)
 
     return (
         <div className="wrapper" style={{
@@ -50,12 +51,14 @@ export default function Header() {
                             ($0)
                         </div>
                     </div>
-                    <div className="flex justify-between hover:text-hover w-full items-center">
+                    <Link href="washList" className="flex justify-between hover:text-hover w-full items-center">
                         <IconHeart size={20} />
                         <div className="text-hover">
-                            (2)
+                            {
+                                isLoggedIn && `(${washListNumbers})`
+                            }
                         </div>
-                    </div>
+                    </Link>
                     <div>
                         <AccountModal />
                     </div>

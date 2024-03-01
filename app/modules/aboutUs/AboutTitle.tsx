@@ -10,7 +10,10 @@ export default function AboutTitle() {
 
     return (
         <div
-            className="about-title-image flex items-center justify-center h-[45vh]">
+            style={{
+                fontFamily: lang == "ar" ? "Cairo, sans-serif" : "inherit"
+            }}
+            className="about-title-image title-image flex items-center justify-center h-[45vh]">
             <h1 className={`text-white text-5xl font-medium  ${lang == "en" && "tracking-[0.5rem]"} uppercase`}>{aboutUs}</h1>
         </div>
     )
