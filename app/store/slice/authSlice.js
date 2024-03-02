@@ -9,7 +9,8 @@ const initialState = {
     isLoggedIn: false,
     name: "",
     isAdmin: false,
-    wishListNumbers: null
+    wishListNumbers: null,
+    cartListNumbers: null,
 };
 
 const userSlice = createSlice({
@@ -21,21 +22,26 @@ const userSlice = createSlice({
             state.name = action.payload.name;
             state.isAdmin = action.payload.isAdmin;
             state.wishListNumbers = action.payload.wishList.length;
+            state.cartListNumbers = action.payload.cart.length;
             state.id = action.payload.id;
         },
         logOut: (state) => {
-            state.isLoggedIn = false;
-            state.name = null;
             state.id = "";
+            state.isLoggedIn = false;
+            state.name = "";
             state.isAdmin = false;
             state.wishListNumbers = null;
+            state.cartListNumbers = null;
         },
-        addTowishListNumber: (state, action) => {
+        addToWishListNumber: (state, action) => {
             state.wishListNumbers = action.payload
-        }
+        },
+        addToCartNumber: (state, action) => {
+            state.cartListNumbers = action.payload
+        },
     },
 });
 
 export default userSlice.reducer;
 
-export const { logIn, logOut, addTowishListNumber } = userSlice.actions;
+export const { logIn, logOut, addToWishListNumber, addToCartNumber } = userSlice.actions;

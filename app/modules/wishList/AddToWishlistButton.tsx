@@ -1,6 +1,6 @@
 "use client"
 
-import { addTowishListNumber } from "@/app/store/slice/authSlice";
+import { addToWishListNumber } from "@/app/store/slice/authSlice";
 import { ProductsTypes, RootState } from "@/app/types";
 import { IconCheck, IconHeartFilled } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ export default function AddToWishlistButton(props: propsType) {
                 const url = `https://depot-data.onrender.com/users/${id}`;
                 const response = await fetch(url);
                 const data = await response.json();
-                dispatch(addTowishListNumber(data.wishList.length))
+                dispatch(addToWishListNumber(data.wishList.length))
                 const foundElement = data.wishList.find((item: ProductsTypes) => item.id === props.product.id)
                 if (foundElement) {
                     setInList(true)
@@ -50,7 +50,7 @@ export default function AddToWishlistButton(props: propsType) {
             } else {
                 data.wishList.push(props.product);
                 setInList(true);
-                dispatch(addTowishListNumber(data.wishList.length));
+                dispatch(addToWishListNumber(data.wishList.length));
                 setLoading(false);
             }
             const updatedData = data;

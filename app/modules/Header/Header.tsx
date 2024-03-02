@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useSelector } from "react-redux";
 import logo from "../../shared/logo.png";
 import AccountModal from "../AccountModal";
+import CartPopup from "../Cart/CartPopup";
 import DarkMode from "../DarkMode";
 import Sidebar from "../Sidebar";
 import Translation from "../Translation";
@@ -43,14 +44,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="flex justify-between gap-4 text-xs items-center header-right">
-                    <div className="flex justify-between gap-1 text-xs">
-                        <div className="hover:text-hover transition ease-in-out duration-300" >
-                            {translations.cart}
-                        </div>
-                        <div className="text-hover">
-                            ($0)
-                        </div>
-                    </div>
+                    <CartPopup />
                     <Link href="wishList" className="flex justify-between hover:text-hover w-full items-center transition ease-in-out duration-300">
                         <IconHeart size={20} />
                         <div className="text-hover">

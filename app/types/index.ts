@@ -26,6 +26,7 @@ export type ProductsTypes = {
     };
     image: string;
     isFavorite: boolean;
+    count: number;
 }
 
 export type regType = {
@@ -51,6 +52,7 @@ type user = {
     isAdmin: boolean,
     wishListNumbers: number | null
     id: string;
+    cartListNumbers: number | null
 }
 
 type form = {
@@ -155,6 +157,10 @@ export type translations = {
     price: string,
     msgWishList: string,
     msgRegisterFirst: string,
+    addingToCart: string,
+    viewCart: string,
+    msgNoProductsInCart: string,
+    total: string,
 }
 
 type language = {

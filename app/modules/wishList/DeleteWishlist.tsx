@@ -1,4 +1,4 @@
-import { addTowishListNumber } from "@/app/store/slice/authSlice";
+import { addToWishListNumber } from "@/app/store/slice/authSlice";
 import { ProductsTypes, RootState } from "@/app/types";
 import { IconX } from "@tabler/icons-react";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,13 +27,13 @@ export default function DeleteWishlist(props: propsType) {
                 },
                 body: JSON.stringify(newData)
             });
-            dispatch(addTowishListNumber(newData.wishList.length))
+            dispatch(addToWishListNumber(newData.wishList.length))
         } catch (error) {
             console.error('Error updating data:', error);
         }
     }
 
-    const handelDeletewishList = () => {
+    const handelDeleteWishList = () => {
         deleteFunction()
     }
 
@@ -42,7 +42,7 @@ export default function DeleteWishlist(props: propsType) {
             <IconX
                 size={20}
                 className="hover:text-hover hover:cursor-pointer transition ease-in-out duration-300"
-                onClick={() => handelDeletewishList()} />
+                onClick={() => handelDeleteWishList()} />
         </div>
     )
 }

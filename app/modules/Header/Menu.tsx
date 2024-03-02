@@ -52,6 +52,7 @@ export default function Menu() {
                     <div className="flex flex-col gap-4 uppercase font-medium">
                         <Link href="/">{home}</Link>
                         <Link href="/cart">{cart}</Link>
+                        <Link href="/wishList">{wishList}</Link>
                         <Link href="/auth">{login}</Link>
                         <Link href="/search">{search}</Link>
                         <TranslationSideBar />
@@ -62,7 +63,6 @@ export default function Menu() {
                             <div className="flex flex-col gap-1.5">
                                 <Link href="/about-us">{aboutUs}</Link>
                                 <Link href="/whatWeDo">{aboutUs}</Link>
-                                <Link href="/wishList">{wishList}</Link>
                             </div>
                         </AccordionBody>
                     </Accordion>

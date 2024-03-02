@@ -1,3 +1,4 @@
+
 import AddToCart from "@/app/modules/AddToCart";
 import Footer from "@/app/modules/Footer";
 import ProductCart from "@/app/modules/ProductCart";
@@ -57,7 +58,6 @@ export default async function page(props: { params: any }) {
                 </div>
                 <hr />
                 <div>
-
                     <p className="text-hover text-sm font-bold" style={{ letterSpacing: "2px" }}>RELATED PRODUCTS</p>
                     <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-12 py-12 mx-auto">
                         {

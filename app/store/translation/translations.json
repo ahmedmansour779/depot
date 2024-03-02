@@ -59,7 +59,7 @@
         "faceBook": "facebook",
         "gitHub": "github",
         "myAccount": "My Account",
-        "checkout": "Checkout",
+        "checkout": "Check out",
         "orderTracking": "Order Tracking",
         "helpSupport": "Help & Support",
         "msgFooter": "AHMED MANSOUR, All Rights Reserved",
@@ -95,7 +95,11 @@
         "type": "type",
         "price": "price",
         "msgWishList": "No products added to the wishlist",
-        "msgRegisterFirst": "You must register first"
+        "msgRegisterFirst": "You must register first",
+        "addingToCart": "adding to cart...",
+        "viewCart": "view cart",
+        "msgNoProductsInCart": "No products in the cart.",
+        "total": "total"
     },
     "ar": {
         "en": "انجليزي",
@@ -193,6 +197,10 @@
         "type": "النوع",
         "price": "السعر",
         "msgWishList": "لم تتم إضافة أي منتجات إلى قائمة الرغبات",
-        "msgRegisterFirst": "يجب عليك التسجيل اولا "
+        "msgRegisterFirst": "يجب عليك التسجيل اولا ",
+        "addingToCart": "إضافة إلى سلة التسوق...",
+        "viewCart": "عرض العربة",
+        "msgNoProductsInCart": "لا توجد منتجات في العربة.",
+        "total": "الاجمالي"
     }
 }
