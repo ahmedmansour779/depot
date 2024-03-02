@@ -12,11 +12,11 @@ export default function ProductCart({ product, isRating }: { product: ProductsTy
 
   return (
     <div className="flex flex-col gap-6 overflow-hidden h-[30rem] cart">
-      <div className=" relative w-fit h-[75%] m-auto flex justify-center items-center overflow-hidden">
+      <div className="relative w-fit h-[75%] m-auto flex justify-center items-center overflow-hidden">
         <Link href={`/products/${product.id}`} className="w-[50%]">
           <img width="100%" height="100%" src={product.image} alt={`${product.title}`} />
         </Link>
-        <div className="absolute hidden bottom-0 w-fit h-[2rem] mx-auto quick-look quick-look">
+        <div className="absolute bottom-0 w-fit h-[2rem] mx-auto quick-look flex">
           <div className="h-full"><QuickLook product={product} /></div>
           <button className="bg-[#555] p-2 h-full">
             <AddToWishlistButton product={product} />
@@ -26,9 +26,7 @@ export default function ProductCart({ product, isRating }: { product: ProductsTy
       <div className="flex flex-col h-[25%] gap-0 py-4 items-center justify-between text-center">
         <h3 className="text-sm uppercase">
           {
-            product.title.length >= +37 ?
-              product.title.slice(0, 38) + "..." :
-              product.title
+            product.title.slice(0, 38) + "..."
           }
         </h3>
         {

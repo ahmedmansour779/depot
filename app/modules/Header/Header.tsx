@@ -18,7 +18,7 @@ export default function Header() {
 
     const user = useSelector((state: RootState) => state.user)
     const { language, translations } = useSelector((state: RootState) => state.translations);
-    const { isLoggedIn, washListNumbers } = useSelector((state: RootState) => state.user)
+    const { isLoggedIn, wishListNumbers } = useSelector((state: RootState) => state.user)
 
     return (
         <div className="wrapper" style={{
@@ -26,15 +26,15 @@ export default function Header() {
         }}>
             <div className="flex justify-between w-full py-14 items-center">
                 <div className="header flex justify-between gap-10">
-                    <Link href="/" className={`hover:text-hover text-xs`}>
+                    <Link href="/" className={`hover:text-hover text-xs transition ease-in-out duration-300`}>
                         {translations.home}
                     </Link>
                     <Pages />
                     {
-                        user.isAdmin && <Link href="/ControlBoard" className={`hover:text-hover text-xs`}>{translations.controlBoard}</Link>
+                        user.isAdmin && <Link href="/ControlBoard" className={`hover:text-hover text-xs transition ease-in-out duration-300`}>{translations.controlBoard}</Link>
                     }
                     {
-                        !user.isAdmin && user.isLoggedIn && <Link href="/profile" className={`hover:text-hover text-xs`}>{translations.profile}</Link>
+                        !user.isAdmin && user.isLoggedIn && <Link href="/profile" className={`hover:text-hover text-xs transition ease-in-out duration-300`}>{translations.profile}</Link>
                     }
                 </div>
                 <div>
@@ -44,25 +44,25 @@ export default function Header() {
                 </div>
                 <div className="flex justify-between gap-4 text-xs items-center header-right">
                     <div className="flex justify-between gap-1 text-xs">
-                        <div className="hover:text-hover" >
+                        <div className="hover:text-hover transition ease-in-out duration-300" >
                             {translations.cart}
                         </div>
                         <div className="text-hover">
                             ($0)
                         </div>
                     </div>
-                    <Link href="washList" className="flex justify-between hover:text-hover w-full items-center">
+                    <Link href="wishList" className="flex justify-between hover:text-hover w-full items-center transition ease-in-out duration-300">
                         <IconHeart size={20} />
                         <div className="text-hover">
                             {
-                                isLoggedIn && `(${washListNumbers})`
+                                isLoggedIn && `(${wishListNumbers})`
                             }
                         </div>
                     </Link>
                     <div>
                         <AccountModal />
                     </div>
-                    <div className="hover:text-hover">
+                    <div className="hover:text-hover transition ease-in-out duration-300">
                         <IconSearch size={20} />
                     </div>
                     <DarkMode />

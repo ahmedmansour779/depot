@@ -106,9 +106,8 @@ body {
 
 /* ------------------- */
 
-.show-button {
-    display: none;
-    opacity: 0;
+.quick-look,
+.quick-look button {
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -116,27 +115,29 @@ body {
     -o-transition: all 0.5s ease-in-out;
 }
 
-.show-button:hover {
-    color: black;
+.quick-look button:hover {
+    opacity: 0.5;
 }
 
-.cart:hover .show-button {
-    display: block !important;
-    opacity: 1;
+.quick-look {
+    bottom: -2rem;
 }
 
 .cart:hover .quick-look {
-    display: flex;
+    bottom: 0rem;
 }
 
-.cart:not(:hover) .quick-look-reverse {
+.show-button {
     display: none;
 }
 
-.cart:hover .hidden-button {
-    display: none !important;
+.cart:hover .show-button {
+    display: block;
 }
 
+.cart:hover .hidden-button {
+    display: none;
+}
 
 /* ------------------------------------------------ */
 

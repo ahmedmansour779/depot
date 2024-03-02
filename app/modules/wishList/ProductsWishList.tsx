@@ -6,7 +6,9 @@ import OneProductWishList from "./OneProductWishList";
 
 export default function ProductsWishList() {
     const [data, setData] = useState<ProductsTypes[]>([])
-    const { id, washListNumbers } = useSelector((state: RootState) => state.user)
+    const { id, wishListNumbers } = useSelector((state: RootState) => state.user)
+    const { msgWishList } = useSelector((state: RootState) => state.translations.translations)
+    const lang = useSelector((state: RootState) => state.translations.language)
 
     useEffect(() => {
         const getData = async () => {
@@ -14,21 +16,20 @@ export default function ProductsWishList() {
                 const url = `https://depot-data.onrender.com/users/${id}`;
                 const response = await fetch(url);
                 const data = await response.json();
-                setData(data.washList)
-                console.log(data.washList)
-                console.log("set data by try");
+                setData(data.wishList)
             } catch (error) {
                 console.log("set data by catch");
             }
         }
         getData()
-    }, [washListNumbers, id])
-
-    console.log(data);
-
+    }, [wishListNumbers, id])
     return (
         <div className="container mx-auto py-24">
-            <div className="flex flex-col gap-8">
+            <div
+                style={{
+                    direction: lang == "ar" ? "rtl" : "ltr"
+                }}
+                className="flex flex-col gap-8">
                 {
                     data.length > 0 ?
                         data.map((product, index) => {
@@ -37,7 +38,7 @@ export default function ProductsWishList() {
                             )
                         }) :
                         <div className="text-center text-hover">
-                            No products added to the wishlist
+                            {msgWishList}
                         </div>
                 }
             </div>

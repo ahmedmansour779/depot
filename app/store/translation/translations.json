@@ -11,7 +11,7 @@
         "register": "register",
         "home": "HOME",
         "products": "PRODUCTS",
-        "washList": "WASH LIST",
+        "wishList": "WASH LIST",
         "controlBoard": "CONTROL BOARD",
         "profile": "PROFILE",
         "cart": "CART",
@@ -93,7 +93,9 @@
         "shoppingExperience": "SHOPPING EXPERIENCE",
         "msgShoppingExperience": "Elevate your shopping experience with us. Discover a seamless and enjoyable way to browse, shop, and interact with your favorite brands.",
         "type": "type",
-        "price": "price"
+        "price": "price",
+        "msgWishList": "No products added to the wishlist",
+        "msgRegisterFirst": "You must register first"
     },
     "ar": {
         "en": "انجليزي",
@@ -107,7 +109,7 @@
         "register": "تسجيل",
         "home": "الصفحه الرئيسية",
         "products": "المنتجات",
-        "washList": "المفضلة",
+        "wishList": "المفضلة",
         "controlBoard": "لوحه التحكم",
         "profile": "الحساب",
         "cart": "الاجمالي",
@@ -189,6 +191,8 @@
         "shoppingExperience": "خبرة التسوق",
         "msgShoppingExperience": "ارفع تجربة التسوق الخاصة بك معنا. اكتشف طريقة سلسة وممتعة للتصفح والتسوق والتفاعل مع العلامات التجارية المفضلة لديك.",
         "type": "النوع",
-        "price": "السعر"
+        "price": "السعر",
+        "msgWishList": "لم تتم إضافة أي منتجات إلى قائمة الرغبات",
+        "msgRegisterFirst": "يجب عليك التسجيل اولا "
     }
 }

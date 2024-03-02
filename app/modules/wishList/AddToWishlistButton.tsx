@@ -1,10 +1,11 @@
 "use client"
 
-import { addToWashListNumber } from "@/app/store/slice/authSlice";
+import { addTowishListNumber } from "@/app/store/slice/authSlice";
 import { ProductsTypes, RootState } from "@/app/types";
 import { IconCheck, IconHeartFilled } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import LoginFirst from "../Notifications/LoginFirst";
 import Loader from "./Loader";
 
 type propsType = {
@@ -12,19 +13,20 @@ type propsType = {
 }
 
 export default function AddToWishlistButton(props: propsType) {
-    const user = useSelector((state: RootState) => state.user)
+    const { name, isLoggedIn, id } = useSelector((state: RootState) => state.user)
     const [inList, setInList] = useState<boolean>(false)
     const [loading, setLoading] = useState<boolean>(false)
     const dispatch = useDispatch()
+    const [showNotification, setShowNotification] = useState(false)
 
     useEffect(() => {
-        const handelWashList = async () => {
+        const handelWishList = async () => {
             try {
-                const url = `https://depot-data.onrender.com/users/${user.id}`;
+                const url = `https://depot-data.onrender.com/users/${id}`;
                 const response = await fetch(url);
                 const data = await response.json();
-                dispatch(addToWashListNumber(data.washList.length))
-                const foundElement = data.washList.find((item: ProductsTypes) => item.id === props.product.id)
+                dispatch(addTowishListNumber(data.wishList.length))
+                const foundElement = data.wishList.find((item: ProductsTypes) => item.id === props.product.id)
                 if (foundElement) {
                     setInList(true)
                 }
@@ -33,21 +35,22 @@ export default function AddToWishlistButton(props: propsType) {
                 setInList(false)
             }
         }
-        user.name !== "" && handelWashList()
-    }, [user.name])
+        name !== "" && handelWishList()
+        isLoggedIn == false && setInList(false)
+    }, [name])
 
-    const handelWashList = async () => {
+    const handelWishList = async () => {
         try {
-            const url = `https://depot-data.onrender.com/users/${user.id}`;
+            const url = `https://depot-data.onrender.com/users/${id}`;
             const response = await fetch(url);
             const data = await response.json();
-            const foundElement = data.washList.find((item: ProductsTypes) => item.id === props.product.id)
+            const foundElement = data.wishList.find((item: ProductsTypes) => item.id === props.product.id)
             if (foundElement) {
                 console.log('Array contains the element');
             } else {
-                data.washList.push(props.product);
+                data.wishList.push(props.product);
                 setInList(true);
-                dispatch(addToWashListNumber(data.washList.length));
+                dispatch(addTowishListNumber(data.wishList.length));
                 setLoading(false);
             }
             const updatedData = data;
@@ -63,23 +66,30 @@ export default function AddToWishlistButton(props: propsType) {
         }
     }
 
-    const addToWashList = () => {
-        if (user.isLoggedIn == true) {
+    const addToWishList = () => {
+        if (isLoggedIn == true) {
             setLoading(true)
-            handelWashList()
+            handelWishList()
         } else {
-            console.log("not");
+            setShowNotification(true)
         }
     }
 
+    setTimeout(() => {
+        setShowNotification(false)
+    }, 3000)
+
     return (
         <div>
+            {
+                showNotification && <LoginFirst />
+            }
             {
                 loading ?
                     <Loader /> :
                     inList ?
                         <IconCheck style={{ color: "#fff" }} size={15} /> :
-                        <IconHeartFilled onClick={() => addToWashList()} style={{ color: "#fff" }} size={15} />
+                        <IconHeartFilled onClick={() => addToWishList()} style={{ color: "#fff" }} size={15} />
             }
         </div>
     )

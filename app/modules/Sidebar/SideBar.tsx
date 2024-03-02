@@ -21,7 +21,7 @@ export default function Sidebar() {
 
     return (
         <div className="transition-config">
-            <button className="hover:text-hover" onClick={openNavbar}>
+            <button className="hover:text-hover transition ease-in-out duration-300" onClick={openNavbar}>
                 <IconMenu2 />
             </button>
             <nav className={`${open ? "show" : "hidden-sidebar"} w-[45vw] sidebar1 bg-primary z-50`}>

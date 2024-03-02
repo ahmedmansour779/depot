@@ -22,7 +22,7 @@ export default function Menu() {
         search,
         pages,
         aboutUs,
-        washList
+        wishList
     } = useSelector((state: RootState) => state.translations.translations)
     const lang = useSelector((state: RootState) => state.translations.language)
 
@@ -62,7 +62,7 @@ export default function Menu() {
                             <div className="flex flex-col gap-1.5">
                                 <Link href="/about-us">{aboutUs}</Link>
                                 <Link href="/whatWeDo">{aboutUs}</Link>
-                                <Link href="/washList">{washList}</Link>
+                                <Link href="/wishList">{wishList}</Link>
                             </div>
                         </AccordionBody>
                     </Accordion>

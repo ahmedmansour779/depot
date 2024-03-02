@@ -15,7 +15,7 @@ export default function Pages() {
         aboutUs,
         pages,
         whatWeDo,
-        washList } = useSelector((state: RootState) => state.translations.translations)
+        wishList } = useSelector((state: RootState) => state.translations.translations)
     const lang = useSelector((state: RootState) => state.translations.language)
 
 
@@ -31,7 +31,7 @@ export default function Pages() {
             >
                 <Link href='/aboutUs' className='hover:text-white'>{aboutUs}</Link>
                 <Link href='/whatWeDo' className='hover:text-white'>{whatWeDo}</Link>
-                <Link href='/washList' className='hover:text-white'>{washList}</Link>
+                <Link href='/wishList' className='hover:text-white'>{wishList}</Link>
             </motion.div>
         )
     }

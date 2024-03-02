@@ -9,7 +9,7 @@ const initialState = {
     isLoggedIn: false,
     name: "",
     isAdmin: false,
-    washListNumbers: null
+    wishListNumbers: null
 };
 
 const userSlice = createSlice({
@@ -20,7 +20,7 @@ const userSlice = createSlice({
             state.isLoggedIn = true;
             state.name = action.payload.name;
             state.isAdmin = action.payload.isAdmin;
-            state.washListNumbers = action.payload.washList.length;
+            state.wishListNumbers = action.payload.wishList.length;
             state.id = action.payload.id;
         },
         logOut: (state) => {
@@ -28,14 +28,14 @@ const userSlice = createSlice({
             state.name = null;
             state.id = "";
             state.isAdmin = false;
-            state.washListNumbers = null;
+            state.wishListNumbers = null;
         },
-        addToWashListNumber: (state, action) => {
-            state.washListNumbers = action.payload
+        addTowishListNumber: (state, action) => {
+            state.wishListNumbers = action.payload
         }
     },
 });
 
 export default userSlice.reducer;
 
-export const { logIn, logOut, addToWashListNumber } = userSlice.actions;
+export const { logIn, logOut, addTowishListNumber } = userSlice.actions;

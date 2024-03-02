@@ -1,4 +1,4 @@
-import { addToWashListNumber } from "@/app/store/slice/authSlice";
+import { addTowishListNumber } from "@/app/store/slice/authSlice";
 import { ProductsTypes, RootState } from "@/app/types";
 import { IconX } from "@tabler/icons-react";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,7 +18,7 @@ export default function DeleteWishlist(props: propsType) {
             const data = await response.json();
             const newData = {
                 ...data,
-                washList: data.washList.filter((item: ProductsTypes) => item.id !== props.product.id)
+                wishList: data.wishList.filter((item: ProductsTypes) => item.id !== props.product.id)
             }
             await fetch(url, {
                 method: 'PUT',
@@ -27,13 +27,13 @@ export default function DeleteWishlist(props: propsType) {
                 },
                 body: JSON.stringify(newData)
             });
-            dispatch(addToWashListNumber(newData.washList.length))
+            dispatch(addTowishListNumber(newData.wishList.length))
         } catch (error) {
             console.error('Error updating data:', error);
         }
     }
 
-    const handelDeleteWashList = () => {
+    const handelDeletewishList = () => {
         deleteFunction()
     }
 
@@ -42,7 +42,7 @@ export default function DeleteWishlist(props: propsType) {
             <IconX
                 size={20}
                 className="hover:text-hover hover:cursor-pointer transition ease-in-out duration-300"
-                onClick={() => handelDeleteWashList()} />
+                onClick={() => handelDeletewishList()} />
         </div>
     )
 }

@@ -48,8 +48,8 @@ export default function AccountModel() {
             </div>
             <button>
                 <div className="hover:text-hover">
-                    {data.isLoggedIn && <div onClick={() => dispatch(logOut())}>{translations.logOut}</div>}
-                    {data.isLoggedIn == false && <div className="hover:text-hover flex justify-between gap-1 items-center" onClick={() => setPopup(true)}>{translations.login}</div>}
+                    {data.isLoggedIn && <div className="hover:text-hover flex justify-between gap-1 items-center transition ease-in-out duration-300" onClick={() => dispatch(logOut())}>{translations.logOut}</div>}
+                    {data.isLoggedIn == false && <div className="hover:text-hover flex justify-between gap-1 items-center transition ease-in-out duration-300" onClick={() => setPopup(true)}>{translations.login}</div>}
                 </div>
             </button>
         </>
