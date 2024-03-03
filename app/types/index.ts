@@ -52,7 +52,8 @@ type user = {
     isAdmin: boolean,
     wishListNumbers: number | null
     id: string;
-    cartListNumbers: number | null
+    cartListNumbers: number | null;
+    cartEvent: boolean
 }
 
 type form = {
@@ -161,6 +162,17 @@ export type translations = {
     viewCart: string,
     msgNoProductsInCart: string,
     total: string,
+    shoppingCart: string,
+    updateCart: string,
+    removeAll: string,
+    goBackShopping: string,
+    cartTotals: string,
+    subTotal: string,
+    changeAddress: string,
+    proceedToCheckout: string,
+    msgEmptyCart: string,
+    msgEmptyCartDescription: string,
+    returnToShop: string,
 }
 
 type language = {

@@ -11,6 +11,7 @@ const initialState = {
     isAdmin: false,
     wishListNumbers: null,
     cartListNumbers: null,
+    cartEvent: false
 };
 
 const userSlice = createSlice({
@@ -36,8 +37,8 @@ const userSlice = createSlice({
         addToWishListNumber: (state, action) => {
             state.wishListNumbers = action.payload
         },
-        addToCartNumber: (state, action) => {
-            state.cartListNumbers = action.payload
+        addToCartNumber: (state) => {
+            state.cartEvent = !state.cartEvent
         },
     },
 });

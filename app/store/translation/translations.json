@@ -99,7 +99,18 @@
         "addingToCart": "adding to cart...",
         "viewCart": "view cart",
         "msgNoProductsInCart": "No products in the cart.",
-        "total": "total"
+        "total": "total",
+        "shoppingCart": "shopping cart",
+        "updateCart": "update cart",
+        "removeAll": "remove all",
+        "goBackShopping": "go back shopping",
+        "cartTotals": "cart totals",
+        "subTotal": "sub total",
+        "changeAddress": "change address",
+        "proceedToCheckout": "proceed to checkout",
+        "msgEmptyCart": "YOUR CART IS CURRENTLY EMPTY.",
+        "msgEmptyCartDescription": "Why not return to our amazing shop and start filling it with products. Just click on the button below to instantly get back to the shop page. Oh, and while you’re there, check out all of our mind-blowing discounts.",
+        "returnToShop": "return to shop"
     },
     "ar": {
         "en": "انجليزي",
@@ -201,6 +212,17 @@
         "addingToCart": "إضافة إلى سلة التسوق...",
         "viewCart": "عرض العربة",
         "msgNoProductsInCart": "لا توجد منتجات في العربة.",
-        "total": "الاجمالي"
+        "total": "الاجمالي",
+        "shoppingCart": "عربة التسوق",
+        "updateCart": "تحديث  العربه",
+        "removeAll": "حذف الكل",
+        "goBackShopping": "العودة للتسوق",
+        "cartTotals": "إجماليات العربة",
+        "subTotal": "المجموع الفرعي",
+        "changeAddress": "تغيير العنوان",
+        "proceedToCheckout": "التحقق للدفع",
+        "msgEmptyCart": "عربة التسوق فارغة حاليا.",
+        "msgEmptyCartDescription": "لماذا لا تعود إلى متجرنا المذهل وتبدأ في ملئه بالمنتجات. ما عليك سوى النقر على الزر أدناه للعودة فورًا إلى صفحة المتجر. وأثناء تواجدك هناك، تحقق من جميع الخصومات المذهلة لدينا.",
+        "returnToShop": "العودة الى المتجر"
     }
 }

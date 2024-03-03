@@ -9,7 +9,7 @@ import CartPopupProducts from "../CartPopupProducts";
 export default function CartPopup() {
   const [show, setShow] = useState(false);
   const target = useRef(null);
-  const { id, cartListNumbers } = useSelector((state: RootState) => state.user)
+  const { id, cartEvent } = useSelector((state: RootState) => state.user)
   const { cart } = useSelector((state: RootState) => state.translations.translations)
   const [allPrice, setAllPrice] = useState(0)
   const [products, setProducts] = useState([])
@@ -35,7 +35,7 @@ export default function CartPopup() {
       }
     }
     getData()
-  }, [id, cartListNumbers])
+  }, [id, cartEvent])
   return (
     <>
       <Popup

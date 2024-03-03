@@ -12,7 +12,7 @@ type propsType = {
 }
 
 export default function AddToCartButton(props: propsType) {
-  const { name, isLoggedIn, id } = useSelector((state: RootState) => state.user)
+  const { name, isLoggedIn, id, cartEvent } = useSelector((state: RootState) => state.user)
   const { addToCart, addingToCart, viewCart } = useSelector((state: RootState) => state.translations.translations)
   const [inList, setInList] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
@@ -25,7 +25,6 @@ export default function AddToCartButton(props: propsType) {
         const url = `https://depot-data.onrender.com/users/${id}`;
         const response = await fetch(url);
         const data = await response.json();
-        dispatch(addToCartNumber(data.cart.length))
         const foundElement = data.cart.find((item: ProductsTypes) => item.id === props.product.id)
         if (foundElement) {
           setInList(true)
@@ -37,7 +36,7 @@ export default function AddToCartButton(props: propsType) {
     }
     name !== "" && handelCartList()
     isLoggedIn == false && setInList(false)
-  }, [name])
+  }, [name, cartEvent])
 
   const handelCartList = async () => {
     try {
@@ -60,7 +59,7 @@ export default function AddToCartButton(props: propsType) {
         },
         body: JSON.stringify(updatedData)
       });
-      dispatch(addToCartNumber(data.cart.length));
+      dispatch(addToCartNumber());
     } catch (error) {
       console.error('Error updating data:', error);
     }
