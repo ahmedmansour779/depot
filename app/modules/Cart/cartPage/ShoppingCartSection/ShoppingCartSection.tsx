@@ -29,10 +29,6 @@ export default function ShoppingCartSection() {
 
   return (
     <div
-      style={{
-        direction: lang == "ar" ? "rtl" : "ltr",
-        fontFamily: lang == "ar" ? "Cairo, sans-serif" : "inherit"
-      }}
       className="py-20 flex flex-col gap-20 w-[inherit]">
       {
         isLoggedIn ?

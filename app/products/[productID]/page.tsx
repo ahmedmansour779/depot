@@ -11,10 +11,10 @@ const ratingLength = [1, 2, 3, 4, 5]
 export default async function page(props: { params: any }) {
     const productId = props.params.productID
 
-    const data = await fetch(`${process.env.REACT_APP_API}/products/${productId}`)
+    const data = await fetch(`https://depot-data.onrender.com/products/${productId}`)
     const product = await data.json()
 
-    const data2 = await fetch(`${process.env.REACT_APP_API}/products`)
+    const data2 = await fetch(`https://depot-data.onrender.com/products`)
     const products: ProductsTypes[] = await data2.json()
 
     return (

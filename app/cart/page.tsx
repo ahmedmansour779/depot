@@ -11,6 +11,7 @@ import { RootState } from "../types";
 
 export default function page() {
     const { id, isLoggedIn, cartEvent } = useSelector((state: RootState) => state.user)
+    const lang = useSelector((state: RootState) => state.translations.language)
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -32,7 +33,12 @@ export default function page() {
             <TitleCartPage />
             {
                 data.length > 0 ?
-                    <div className="container mx-auto flex bigTablet:flex-row flex-col gap-8">
+                    <div
+                        style={{
+                            direction: lang == "ar" ? "rtl" : "ltr",
+                            fontFamily: lang == "ar" ? "Cairo, sans-serif" : "inherit"
+                        }}
+                        className="container mx-auto flex bigTablet:flex-row flex-col gap-8">
                         <ShoppingCartSection />
                         <CartTotalSection />
                     </div> :

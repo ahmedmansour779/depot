@@ -1,13 +1,15 @@
 import { ProductsTypes, RootState } from "@/app/types";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import AllPriceProductCart from "../AllPriceProductCart";
 import DeleteBtnCartProduct from "../DeleteBtnCartProduct";
+import InputQuantityProductCart from "../InputQuantityProductCart";
 
 export type ProductCartPageProps = {
   product: ProductsTypes
 };
 export default function ProductCartPage(props: ProductCartPageProps) {
-  const { image, title, price } = props.product
+  const { image, title, price, id, quantity: count } = props.product
   const { quantity } = useSelector((state: RootState) => state.translations.translations)
   const [loading, setLoading] = useState(false)
 
@@ -37,23 +39,15 @@ export default function ProductCartPage(props: ProductCartPageProps) {
         >
           {price}$
         </div>
-        <div
-          className="text-hover uppercase text-xs"
-        >
-          {quantity}
+        <div className="flex items-center gap-4 border-solid border-[1px] border-[#e1e1e1] py-2 px-4">
+          <div
+            className="text-hover uppercase text-xs"
+          >
+            {quantity}
+          </div>
+          <InputQuantityProductCart id={id} />
         </div>
-        <div>
-          <input
-            type="number"
-            defaultValue={1}
-            min={1}
-            className="text-hover uppercase text-xs w-7" />
-        </div>
-        <div
-          className="text-hover uppercase text-xs"
-        >
-          {price}$
-        </div>
+        <AllPriceProductCart count={count} price={price} />
       </div>
     </div>
   );

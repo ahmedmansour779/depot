@@ -10,8 +10,6 @@ export default function ProductsListCartPage() {
   const [data, setData] = useState([]);
   const { id, cartEvent } = useSelector((state: RootState) => state.user)
 
-  console.log(cartEvent);
-
   useEffect(() => {
     const getData = async () => {
       try {

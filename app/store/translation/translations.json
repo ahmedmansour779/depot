@@ -110,7 +110,12 @@
         "proceedToCheckout": "proceed to checkout",
         "msgEmptyCart": "YOUR CART IS CURRENTLY EMPTY.",
         "msgEmptyCartDescription": "Why not return to our amazing shop and start filling it with products. Just click on the button below to instantly get back to the shop page. Oh, and while you’re there, check out all of our mind-blowing discounts.",
-        "returnToShop": "return to shop"
+        "returnToShop": "return to shop",
+        "shipping": "shipping",
+        "shippingType1": "Free shipping",
+        "shippingType2": "Local pickup",
+        "shippingType3": "Flat Rate: $10",
+        "shippingTo": "shipping To"
     },
     "ar": {
         "en": "انجليزي",
@@ -223,6 +228,11 @@
         "proceedToCheckout": "التحقق للدفع",
         "msgEmptyCart": "عربة التسوق فارغة حاليا.",
         "msgEmptyCartDescription": "لماذا لا تعود إلى متجرنا المذهل وتبدأ في ملئه بالمنتجات. ما عليك سوى النقر على الزر أدناه للعودة فورًا إلى صفحة المتجر. وأثناء تواجدك هناك، تحقق من جميع الخصومات المذهلة لدينا.",
-        "returnToShop": "العودة الى المتجر"
+        "returnToShop": "العودة الى المتجر",
+        "shipping": "الشحن",
+        "shippingType1": "شحن مجاني",
+        "shippingType2": "شاحنة محلية",
+        "shippingType3": "السعر الثابت: 10 دولارات",
+        "shippingTo": "يشحن إلى"
     }
 }

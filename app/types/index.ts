@@ -24,6 +24,7 @@ export type ProductsTypes = {
         rate: number,
         count: number
     };
+    quantity?: number;
     image: string;
     isFavorite: boolean;
     count: number;
@@ -173,6 +174,11 @@ export type translations = {
     msgEmptyCart: string,
     msgEmptyCartDescription: string,
     returnToShop: string,
+    shipping: string,
+    shippingType1: string,
+    shippingType2: string,
+    shippingType3: string,
+    shippingTo: string,
 }
 
 type language = {
