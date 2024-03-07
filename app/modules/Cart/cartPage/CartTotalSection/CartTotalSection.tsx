@@ -4,6 +4,7 @@ import { RootState } from "@/app/types";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import ShippingType from "../../ShippingType";
+import FormUpdateAddress from "../FormUpdateAddress";
 import SubTotal from "../SubTotal";
 
 export default function CartTotalSection() {
@@ -13,7 +14,7 @@ export default function CartTotalSection() {
 
   return (
     <div
-      className={`w-full bigTablet:w-96 bg-[#e1e1e1] py-4 px-4 h-fit bigTablet:mt-16 flex flex-col gap-4 ${lang == "ar" && "hidden"}`}>
+      className={`w-full bigTablet:w-96 bg-[#fafafa] py-4 px-4 h-fit bigTablet:mt-16 flex flex-col gap-4 ${isLoggedIn == false && "hidden"}`}>
       <h1
         className={`uppercase font-medium ${lang == "en" && "tracking-wider text-xl"} mb-4`}
       >
@@ -21,14 +22,7 @@ export default function CartTotalSection() {
       </h1>
       <SubTotal />
       <ShippingType />
-      <div>
-        <p>
-
-        </p>
-        <p>
-
-        </p>
-      </div>
+      <FormUpdateAddress />
       <Link href="/checkout">
 
       </Link>

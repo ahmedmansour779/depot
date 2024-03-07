@@ -4,14 +4,15 @@ import { createSlice } from '@reduxjs/toolkit';
 // const password = localStorage.getItem('password');
 // const isAdmin = localStorage.getItem('isAdmin');
 
-const initialState = {
+export const initialState = {
     id: "",
     isLoggedIn: false,
     name: "",
     isAdmin: false,
     wishListNumbers: null,
     cartListNumbers: null,
-    cartEvent: false
+    cartEvent: false,
+    cart: []
 };
 
 const userSlice = createSlice({

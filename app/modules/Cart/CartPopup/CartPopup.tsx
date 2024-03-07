@@ -29,7 +29,7 @@ export default function CartPopup() {
           return null;
         })
         const sum = arrayPrice.reduce((acc, curr) => acc + curr, 0);
-        setAllPrice(sum)
+        sum > 0 && setAllPrice(sum.toFixed(2))
       } catch (error) {
         setAllPrice(0);
       }

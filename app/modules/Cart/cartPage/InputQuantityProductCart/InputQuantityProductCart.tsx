@@ -33,9 +33,6 @@ export default function InputQuantityProductCart(props: propsType) {
     getCount()
   }, [])
 
-  console.log(count);
-
-
   const increment = async () => {
     setCount(count + 1);
     quantityChange(count + 1)
@@ -69,7 +66,7 @@ export default function InputQuantityProductCart(props: propsType) {
   }
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center font-light">
       {
         lang == "en" ?
           <>

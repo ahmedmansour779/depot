@@ -30,21 +30,14 @@ export type ProductsTypes = {
     count: number;
 }
 
-export type regType = {
-    id: string,
-    name: string,
-    password: string,
-    email: string,
-    isAdmin: boolean
-}
-
 export interface RegType {
     id: string;
     name: string;
     password: string;
     email: string;
     isAdmin: boolean;
-    wishList: [];
+    wishList: ProductsTypes[];
+    cart: ProductsTypes[]
 }
 
 type user = {
@@ -179,6 +172,11 @@ export type translations = {
     shippingType2: string,
     shippingType3: string,
     shippingTo: string,
+    Country: string,
+    stateCounty: string,
+    city: string,
+    postCodeZip: string,
+    update: string,
 }
 
 type language = {

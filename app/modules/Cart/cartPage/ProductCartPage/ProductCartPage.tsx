@@ -35,13 +35,13 @@ export default function ProductCartPage(props: ProductCartPageProps) {
       </div>
       <div className="flex gap-8 items-center">
         <div
-          className="text-hover uppercase text-xs w-7 flex justify-center"
+          className="text-hover uppercase text-xs w-7 flex justify-center font-light"
         >
           {price}$
         </div>
         <div className="flex items-center gap-4 border-solid border-[1px] border-[#e1e1e1] py-2 px-4">
           <div
-            className="text-hover uppercase text-xs"
+            className="text-hover uppercase text-xs font-light"
           >
             {quantity}
           </div>

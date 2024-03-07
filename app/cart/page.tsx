@@ -7,12 +7,12 @@ import CartEmpty from "../modules/Cart/cartPage/CartEmpty";
 import CartTotalSection from "../modules/Cart/cartPage/CartTotalSection";
 import ShoppingCartSection from "../modules/Cart/cartPage/ShoppingCartSection/ShoppingCartSection";
 import Footer from "../modules/Footer";
-import { RootState } from "../types";
+import { RegType, RootState } from "../types";
 
 export default function page() {
     const { id, isLoggedIn, cartEvent } = useSelector((state: RootState) => state.user)
     const lang = useSelector((state: RootState) => state.translations.language)
-    const [data, setData] = useState([])
+    const [data, setData] = useState<RegType | {}>({})
 
     useEffect(() => {
         const handelData = async () => {
@@ -32,7 +32,7 @@ export default function page() {
         <>
             <TitleCartPage />
             {
-                data.length > 0 ?
+                Object.keys(data).length > 0 || Object.keys(data).length > 0 ?
                     <div
                         style={{
                             direction: lang == "ar" ? "rtl" : "ltr",

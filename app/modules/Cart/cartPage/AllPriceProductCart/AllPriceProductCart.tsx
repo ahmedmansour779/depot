@@ -6,11 +6,11 @@ export default function AllPriceProductCart(props: AllPriceProductCartProps) {
   const { count, price } = props;
 
   return (
-    <div className="text-hover uppercase text-xs">
+    <div className="text-hover uppercase text-xs font-semibold w-14">
       {
         count ?
           <>
-            {count * price} $
+            {count * price}$
           </> :
           <>
             {price}$

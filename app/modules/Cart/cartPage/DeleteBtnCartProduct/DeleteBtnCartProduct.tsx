@@ -47,8 +47,8 @@ export default function DeleteBtnCartProduct(props: DeleteBtnCartProductProps) {
   return (
     <div>
       <IconX
-        size={20}
-        className="hover:text-hover hover:cursor-pointer transition ease-in-out duration-300"
+        size={15}
+        className="text-hover hover:text-black hover:cursor-pointer transition ease-in-out duration-300"
         onClick={() => handelDeleteCartList()} />
     </div>
   );

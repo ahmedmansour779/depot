@@ -8,6 +8,7 @@ export default function SubTotal() {
   const { subTotal } = useSelector((state: RootState) => state.translations.translations)
   const { id, cartEvent } = useSelector((state: RootState) => state.user)
   const [allPrice, setAllPrice] = useState<number>(0)
+  const lang = useSelector((state: RootState) => state.translations.language)
 
   useEffect(() => {
     const getData = async () => {
@@ -32,10 +33,10 @@ export default function SubTotal() {
 
   return (
     <div className="flex justify-between w-full uppercase text-sm">
-      <h1 className="font-medium">
+      <h1 className={`font-medium ${lang == "en" && "tracking-wider"}`}>
         {subTotal}
       </h1>
-      <p className="w-1/2 text-gray-500 font-light">{allPrice}$</p>
+      <p className="w-32 text-gray-500 font-light">{allPrice}$</p>
     </div>
   );
 }

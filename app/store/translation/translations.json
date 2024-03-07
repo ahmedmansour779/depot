@@ -105,7 +105,7 @@
         "removeAll": "remove all",
         "goBackShopping": "go back shopping",
         "cartTotals": "cart totals",
-        "subTotal": "sub total",
+        "subTotal": "subtotal",
         "changeAddress": "change address",
         "proceedToCheckout": "proceed to checkout",
         "msgEmptyCart": "YOUR CART IS CURRENTLY EMPTY.",
@@ -115,7 +115,12 @@
         "shippingType1": "Free shipping",
         "shippingType2": "Local pickup",
         "shippingType3": "Flat Rate: $10",
-        "shippingTo": "shipping To"
+        "shippingTo": "shipping To",
+        "Country": "Country",
+        "stateCounty": "State / County",
+        "city": "City",
+        "postCodeZip": "Postcode / ZIP",
+        "update": "update"
     },
     "ar": {
         "en": "انجليزي",
@@ -233,6 +238,11 @@
         "shippingType1": "شحن مجاني",
         "shippingType2": "شاحنة محلية",
         "shippingType3": "السعر الثابت: 10 دولارات",
-        "shippingTo": "يشحن إلى"
+        "shippingTo": "يشحن إلى",
+        "Country": "الدوله",
+        "stateCounty": "المحافظه / المقاطعه",
+        "city": "المدينه",
+        "postCodeZip": "الرمز البريدي",
+        "update": "تحديث"
     }
 }
