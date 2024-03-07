@@ -1,0 +1,46 @@
+"use client";
+
+import { RootState } from "@/app/types";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
+export default function TotalSectionInCartTotalSection() {
+  const { total } = useSelector((state: RootState) => state.translations.translations)
+  const { id, cartEvent } = useSelector((state: RootState) => state.user)
+  const [allPrice, setAllPrice] = useState<number>(0)
+  const lang = useSelector((state: RootState) => state.translations.language)
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const url = `https://depot-data.onrender.com/users/${id}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        const priceArray: number[] = []
+        data.cart.map((item: { price: number; quantity: any }) => {
+          item.quantity ?
+            priceArray.push(item.quantity * item.price) :
+            priceArray.push(item.price)
+        })
+        const sum = priceArray.reduce((total, currentValue) => total + currentValue, 0);
+        setAllPrice(+sum.toFixed(2));
+      } catch {
+        console.log("error");
+      }
+    }
+    getData()
+  }, [cartEvent])
+
+  return (
+    <div className="flex justify-between items-center">
+      <p
+        className={`uppercase font-medium text-sm ${lang == "en" && "tracking-wider"}`}>
+        {total}
+      </p>
+      <p
+        className="text-2xl font-medium">
+        ${allPrice}
+      </p>
+    </div>
+  );
+}
