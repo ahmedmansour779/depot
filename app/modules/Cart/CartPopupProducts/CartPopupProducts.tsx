@@ -1,9 +1,10 @@
 "use client";
 
+import DeleteBtnCartProduct from "@/app/components/form/DeleteBtnCartProduct";
 import { ProductsTypes, RootState } from "@/app/types";
-import { IconX } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import ButtonsPopup from "../ButtonsPopup";
 
@@ -15,43 +16,46 @@ type propsType = {
 export default function CartPopupProducts(props: propsType) {
   const lang = useSelector((state: RootState) => state.translations.language)
   const { msgNoProductsInCart, total } = useSelector((state: RootState) => state.translations.translations)
+  const [loading, setLoading] = useState(false)
 
   const ProductsList = () => {
     return (
-      <div className="flex flex-col gap-4 w-full max-h-62 overflow-y-scroll">
+      <div className={`flex flex-col gap-4 w-full max-h-62 overflow-y-scroll ${loading ? "opacity-50" : "opacity-100"}`}>
         {
           props.products.map((product, index) => {
             return (
-              <div
-                key={index}
-                className="flex gap-2 justify-between w-full"
-              >
-                <div className="flex gap-2">
-                  <div className="w-10 hover:cursor-default">
-                    <img
-                      className="w-10"
-                      src={product.image}
-                      alt={product.title} />
+              <div>
+                <div
+                  key={index}
+                  className="flex gap-2 justify-between w-full"
+                >
+                  <div className="flex gap-2">
+                    <div className="w-10 hover:cursor-default">
+                      <img
+                        className="w-10"
+                        src={product.image}
+                        alt={product.title} />
+                    </div>
+                    <div className="flex flex-col gap-1 item-start justify-start">
+                      <span className="text-white hover:cursor-pointer">
+                        <Link href={`products/${product.id}`}>
+                          {product.title.slice(0, 10) + "..."}
+                        </Link>
+                      </span>
+                      <span className="text-hover hover:cursor-default w-full" >
+                        <>
+                          {
+                            product.quantity ?
+                              `${product.quantity} x ${product.price}$` :
+                              `1 x ${product.price}$`
+                          }
+                        </>
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-1 item-start justify-start">
-                    <span className="text-white hover:cursor-pointer">
-                      <Link href={`products/${product.id}`}>
-                        {product.title.slice(0, 10) + "..."}
-                      </Link>
-                    </span>
-                    <span className="text-hover hover:cursor-default w-full" >
-                      <>
-                        {
-                          product.count ?
-                            `${product.count} x ${product.price}$` :
-                            `1 x ${product.price}$`
-                        }
-                      </>
-                    </span>
+                  <div className="pt-1">
+                    <DeleteBtnCartProduct id={product.id} setLoading={setLoading} loading={loading} />
                   </div>
-                </div>
-                <div className="pt-1">
-                  <IconX size={15} className="text-hover hover:text-white hover:cursor-pointer transition ease-in-out duration-300" />
                 </div>
               </div>
             )

@@ -1,13 +1,13 @@
 "use client";
 
-import { RootState } from "@/app/types";
+import { ProductsTypes, RootState } from "@/app/types";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import CartEmpty from "../CartEmpty";
 import ProductCartPage from "../ProductCartPage";
 
 export default function ProductsListCartPage() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<[] | ProductsTypes[]>([]);
   const { id, cartEvent } = useSelector((state: RootState) => state.user)
 
   useEffect(() => {
@@ -30,7 +30,12 @@ export default function ProductsListCartPage() {
         data ?
           data.map((item, index) => {
             return (
-              <ProductCartPage product={item} key={index} />
+              <div key={index} className="flex flex-col gap-6">
+                <ProductCartPage product={item} />
+                {
+                  data.length !== index + 1 && <hr />
+                }
+              </div>
             )
           }) : <CartEmpty />
       }

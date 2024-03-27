@@ -1,7 +1,7 @@
 "use client";
 
 import { addToCartNumber } from "@/app/store/slice/authSlice";
-import { RootState } from "@/app/types";
+import { ProductsTypes, RootState } from "@/app/types";
 import { IconCaretLeftFilled, IconCaretRightFilled } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,9 +23,11 @@ export default function InputQuantityProductCart(props: propsType) {
         const url = `https://depot-data.onrender.com/users/${user.id}`
         const response = await fetch(url);
         const data = await response.json();
-        data.quantity ?
-          setCount(data.quantity) :
-          setCount(1)
+        data.cart.map((item: ProductsTypes) => {
+          if (item.id === id && item.quantity) {
+            setCount(item.quantity)
+          }
+        })
       } catch {
         console.log("error");
       }
@@ -45,6 +47,8 @@ export default function InputQuantityProductCart(props: propsType) {
     }
   };
 
+  // console.log(count);
+
   const quantityChange = async (countNumber: number) => {
     try {
       const url = `https://depot-data.onrender.com/users/${user.id}`
@@ -58,11 +62,10 @@ export default function InputQuantityProductCart(props: propsType) {
         },
         body: JSON.stringify(data)
       });
-      dispatch(addToCartNumber())
     } catch {
       console.log("error");
     }
-    console.log(count);
+    dispatch(addToCartNumber());
   }
 
   return (
@@ -84,7 +87,7 @@ export default function InputQuantityProductCart(props: propsType) {
             <button onClick={() => increment()}><IconCaretRightFilled size={20} className='text-hover' /></button>
             <input
               type="number"
-              defaultValue={1}
+              defaultValue={count}
               value={count}
               min={1}
               readOnly

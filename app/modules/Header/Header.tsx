@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 import logo from "../../shared/logo.png";
 import AccountModal from "../AccountModal";
 import CartPopup from "../Cart/CartPopup";
-import DarkMode from "../DarkMode";
 import Sidebar from "../Sidebar";
 import Translation from "../Translation";
 import Menu from "./Menu";
@@ -59,7 +58,6 @@ export default function Header() {
                     <div className="hover:text-hover transition ease-in-out duration-300">
                         <IconSearch size={20} />
                     </div>
-                    <DarkMode />
                     <Translation />
                     <Sidebar />
                 </div>

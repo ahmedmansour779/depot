@@ -3,7 +3,7 @@
 import { RootState } from "@/app/types";
 import Link from "next/link";
 import { useSelector } from "react-redux";
-import ShippingType from "../../ShippingType";
+import ShippingTypeSection from "../../ShippingTypeSection";
 import FormUpdateAddress from "../FormUpdateAddress";
 import SubTotal from "../SubTotal";
 import TotalSectionInCartTotalSection from "../TotalSectionInCartTotalSection";
@@ -22,7 +22,7 @@ export default function CartTotalSection() {
         {cartTotals}
       </h1>
       <SubTotal />
-      <ShippingType />
+      <ShippingTypeSection />
       <FormUpdateAddress />
       <hr />
       <TotalSectionInCartTotalSection />

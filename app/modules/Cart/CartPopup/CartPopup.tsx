@@ -23,13 +23,13 @@ export default function CartPopup() {
         setProducts(data.cart)
         const arrayPrice: any[] = []
         data.cart.map((item: any) => {
-          item.count ?
-            arrayPrice.push(item.price * item.count) :
+          item.quantity ?
+            arrayPrice.push(item.price * item.quantity) :
             arrayPrice.push(item.price)
           return null;
         })
         const sum = arrayPrice.reduce((acc, curr) => acc + curr, 0);
-        sum > 0 && setAllPrice(sum.toFixed(2))
+        sum > 0 ? setAllPrice(sum.toFixed(2)) : setAllPrice(0)
       } catch (error) {
         setAllPrice(0);
       }

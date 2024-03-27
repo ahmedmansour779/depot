@@ -26,7 +26,6 @@ export type ProductsTypes = {
     };
     quantity?: number;
     image: string;
-    isFavorite: boolean;
     count: number;
 }
 
@@ -177,6 +176,24 @@ export type translations = {
     city: string,
     postCodeZip: string,
     update: string,
+    yourOrder: string,
+    product: string,
+    billingDetails: string,
+    firstName: string,
+    lastName: string,
+    componyName: string,
+    countryRegion: string,
+    streetAddress: string,
+    phone: string,
+    emailAddress: string,
+    orderNotes: string,
+    optional: string,
+    townCity: string,
+    department: string,
+    msgDiffrentAddress: string,
+    msgSubmitDetails: string,
+    orderNow: string,
+    oderSuccessful: string,
 }
 
 type language = {
@@ -188,7 +205,6 @@ export type RootState = {
     user: user,
     showForm: form,
     translations: language,
-    theme: ThemeState,
     filterPrice: typeValueFilter
 }
 
@@ -212,3 +228,24 @@ export type typeDataCartsWhatWeDo = {
     title: string;
     description: string;
 }[]
+
+// details order type
+
+export type DetailsAddress = {
+    firstName: string;
+    secondName: string;
+    companyName?: string;
+    country: string;
+    department: string;
+    streetAddress: string;
+    town: string;
+    postcode: string;
+    phone?: string;
+    emailAddress?: string;
+}
+
+export type typeDetailsOrder = {
+    address: DetailsAddress[],
+    order: ProductsTypes[],
+    orderNots: string
+}
