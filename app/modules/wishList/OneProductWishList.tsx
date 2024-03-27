@@ -1,5 +1,6 @@
 import { ProductsTypes } from "@/app/types"
 import Link from "next/link"
+import AddToCartButton from "../Cart/AddToCartButton"
 import DeleteWishlist from "./DeleteWishlist"
 import QuickLook from "./QuickLook"
 
@@ -31,7 +32,7 @@ export default function OneProductWishList(props: typeProps) {
                         {props.product.category}
                     </div>
                     <div>
-                        Add to cart
+                        <AddToCartButton product={props.product} />
                     </div>
                 </div>
             </div>
