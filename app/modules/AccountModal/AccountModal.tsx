@@ -13,13 +13,9 @@ import Register from '../Register';
 export default function AccountModel() {
     const data = useSelector((state: RootState) => state.user);
     const showForm = useSelector((state: RootState) => state.showForm.show);
-    const { language, translations } = useSelector((state: RootState) => state.translations);
+    const { translations } = useSelector((state: RootState) => state.translations);
     const dispatch = useDispatch()
-
-    // const [opened, { open, close }] = useDisclosure(false);
-
     const [popup, setPopup] = useState(false)
-
 
     return (
         <>

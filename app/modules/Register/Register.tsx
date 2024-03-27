@@ -40,7 +40,9 @@ export default function Register() {
     setNotificationWarningEmail(false);
     setNotificationWarningPassword(false);
     setNotificationErrorPassword(false);
-    let regObj: RegType = { id, name, password, email, isAdmin: false, wishList: [] };
+    let regObj: RegType = {
+      id, name, password, email, isAdmin: false, wishList: [], cart: []
+    };
     if (isValidateRegister()) {
       try {
         const response = await fetch(`https://depot-data.onrender.com/users/`, {

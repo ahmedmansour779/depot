@@ -7,7 +7,6 @@ import { useRef, useState } from 'react';
 import { useSelector } from "react-redux";
 import Popup from 'reactjs-popup';
 
-
 export default function Pages() {
     const [show, setShow] = useState(false);
     const target = useRef(null);
@@ -18,6 +17,7 @@ export default function Pages() {
         cart,
         wishList } = useSelector((state: RootState) => state.translations.translations)
     const lang = useSelector((state: RootState) => state.translations.language)
+    const loggedIn = useSelector((state: RootState) => state.user.isLoggedIn)
 
 
     const Details = () => {
@@ -32,8 +32,14 @@ export default function Pages() {
             >
                 <Link href='/aboutUs' className='hover:text-white'>{aboutUs}</Link>
                 <Link href='/whatWeDo' className='hover:text-white'>{whatWeDo}</Link>
-                <Link href='/wishList' className='hover:text-white'>{wishList}</Link>
-                <Link href='/cart' className='hover:text-white'>{cart}</Link>
+                {
+                    loggedIn &&
+                    <>
+                        <Link href='/wishList' className='hover:text-white'>{wishList}</Link>
+                        <Link href='/cart' className='hover:text-white'>{cart}</Link>
+                    </>
+                }
+
             </motion.div>
         )
     }
