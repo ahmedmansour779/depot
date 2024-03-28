@@ -195,6 +195,9 @@ export type translations = {
     orderNow: string,
     oderSuccessful: string,
     enterKeyword: string,
+    searchResult: string,
+    typeHere: string,
+    msgSearchPage: string,
 }
 
 type language = {

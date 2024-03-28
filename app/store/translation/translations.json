@@ -139,7 +139,10 @@
         "msgSubmitDetails": "Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.",
         "orderNow": "order now",
         "oderSuccessful": "order is done",
-        "enterKeyword": "enter keyword..."
+        "enterKeyword": "enter keyword...",
+        "searchResult": "SEARCH RESULTS",
+        "typeHere": "type here",
+        "msgSearchPage": "If you are not happy with the results below please do another search"
     },
     "ar": {
         "en": "انجليزي",
@@ -281,6 +284,9 @@
         "msgSubmitDetails": "سيتم استخدام بياناتك الشخصية لمعالجة طلبك، ودعم تجربتك عبر هذا الموقع، ولأغراض أخرى موضحة في سياسة الخصوصية الخاصة بنا.",
         "orderNow": "النظام الآن",
         "oderSuccessful": "تم الأمر",
-        "enterKeyword": "ادخل الكلمات المفتاحيه"
+        "enterKeyword": "ادخل الكلمات المفتاحيه",
+        "searchResult": "نتائج الحمل",
+        "typeHere": "اكتب هنا",
+        "msgSearchPage": "إذا لم تكن راضيًا عن النتائج أدناه، فيرجى إجراء بحث آخر"
     }
 }
