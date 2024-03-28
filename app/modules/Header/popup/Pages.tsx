@@ -39,7 +39,6 @@ export default function Pages() {
                         <Link href='/cart' className='hover:text-white'>{cart}</Link>
                     </>
                 }
-
             </motion.div>
         )
     }

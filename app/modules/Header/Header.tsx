@@ -2,7 +2,7 @@
 
 import "@/app/globals.css";
 import { RootState } from "@/app/types";
-import { IconHeart, IconSearch } from "@tabler/icons-react";
+import { IconHeart } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
@@ -12,6 +12,7 @@ import CartPopup from "../Cart/CartPopup";
 import Sidebar from "../Sidebar";
 import Translation from "../Translation";
 import Menu from "./Menu";
+import SearchPopup from "./SearchPopup";
 import Pages from "./popup/Pages";
 
 export default function Header() {
@@ -55,9 +56,7 @@ export default function Header() {
                     <div>
                         <AccountModal />
                     </div>
-                    <div className="hover:text-hover transition ease-in-out duration-300">
-                        <IconSearch size={20} />
-                    </div>
+                    <SearchPopup />
                     <Translation />
                     <Sidebar />
                 </div>

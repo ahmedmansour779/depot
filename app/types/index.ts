@@ -194,6 +194,7 @@ export type translations = {
     msgSubmitDetails: string,
     orderNow: string,
     oderSuccessful: string,
+    enterKeyword: string,
 }
 
 type language = {
