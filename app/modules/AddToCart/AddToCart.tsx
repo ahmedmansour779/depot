@@ -34,8 +34,6 @@ export default function AddToCart(props: propsType) {
     product && setProduct(product)
   }, [])
 
-  console.log(product);
-
   return (
     <div className="flex flex-col sm:flex-row sm:gap-0 gap-4 items-center p-4 pl-0 mt-4 transition-config">
       <div className="flex border-solid border-[1px] border-[#e1e1e1] p-[0.9rem] w-full sm:w-fit justify-between items-center">

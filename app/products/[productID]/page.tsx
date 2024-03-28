@@ -2,8 +2,8 @@
 import AddToCart from "@/app/modules/AddToCart";
 import Footer from "@/app/modules/Footer";
 import ProductCart from "@/app/modules/ProductCart";
+import AddToWishList from "@/app/modules/productDetailsPage/AddToWishList";
 import { ProductsTypes } from "@/app/types";
-import { IconHeart } from "@tabler/icons-react";
 import Details from "./Details";
 
 const ratingLength = [1, 2, 3, 4, 5]
@@ -46,7 +46,7 @@ export default async function page(props: { params: any }) {
                         </div>
                         <div className="text-hover">{product.description}</div>
                         <AddToCart productID={productId} productPage={true} product={product} />
-                        <button className="flex flex-row items-center gap-4 mt-4 mb-14"><IconHeart style={{ display: "inline" }} size={18} /> ADD TO WISHLIST</button>
+                        <AddToWishList product={product} />
                         <div className="text-sm">
                             <div>SKU: 005</div>
                             <div>Categories:<span className="text-hover"> {product.category}</span></div>

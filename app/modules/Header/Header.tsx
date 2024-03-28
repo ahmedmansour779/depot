@@ -44,7 +44,7 @@ export default function Header() {
                 </div>
                 <div className="flex justify-between gap-4 text-xs items-center header-right">
                     <CartPopup />
-                    <Link href="wishList" className="flex justify-between hover:text-hover w-full items-center transition ease-in-out duration-300">
+                    <Link href="/wishList" className="flex justify-between hover:text-hover w-full items-center transition ease-in-out duration-300">
                         <IconHeart size={20} />
                         <div className="text-hover">
                             {
