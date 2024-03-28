@@ -12,10 +12,11 @@ export default async function page(props: { params: any }) {
     const productId = props.params.productID
 
     const data = await fetch(`https://depot-data.onrender.com/products/${productId}`)
-    const product = await data.json()
+    const product: ProductsTypes = await data.json()
 
     const data2 = await fetch(`https://depot-data.onrender.com/products`)
     const products: ProductsTypes[] = await data2.json()
+    console.log(product);
 
     return (
         <>
@@ -44,14 +45,11 @@ export default async function page(props: { params: any }) {
                             </div>
                         </div>
                         <div className="text-hover">{product.description}</div>
-                        test
-                        <AddToCart productPage={true} product={product} />
-                        test
+                        <AddToCart productID={productId} productPage={true} product={product} />
                         <button className="flex flex-row items-center gap-4 mt-4 mb-14"><IconHeart style={{ display: "inline" }} size={18} /> ADD TO WISHLIST</button>
                         <div className="text-sm">
                             <div>SKU: 005</div>
-                            <div>Categories:<span className="text-hover"> Basics, Furniture, Home Decor</span></div>
-                            <div>Tags:<span className="text-hover"> Decoration, Modern</span></div>
+                            <div>Categories:<span className="text-hover"> {product.category}</span></div>
                         </div>
                     </div>
                 </div>
