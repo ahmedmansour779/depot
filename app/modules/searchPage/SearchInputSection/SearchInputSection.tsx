@@ -2,6 +2,7 @@
 
 import { RootState } from "@/app/types";
 import { useSelector } from "react-redux";
+import InputSearch from "../InputSearch";
 
 export type SearchInputSectionProps = {
   // props go here
@@ -9,8 +10,6 @@ export type SearchInputSectionProps = {
 export default function SearchInputSection(props: SearchInputSectionProps) {
   const {
     searchResult,
-    typeHere,
-    msgSearchPage
   } = useSelector((state: RootState) => state.translations.translations)
   const lang = useSelector((state: RootState) => state.translations.language)
 
@@ -22,11 +21,7 @@ export default function SearchInputSection(props: SearchInputSectionProps) {
         className={`text-3xl uppercase font-medium ${lang == "en" && "tracking-widest"}`}
       >{searchResult}:
       </h1>
-      <p
-        className="text-sm text-hover"
-      >
-        {msgSearchPage}
-      </p>
+      <InputSearch />
     </div>
   );
 }

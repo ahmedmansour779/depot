@@ -39,7 +39,7 @@ export default function SearchPopup(props: SearchPopupProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           style={{ direction: lang == "ar" ? "rtl" : "ltr" }}
-          className='flex flex-row items-center justify-between gap-1 absolute w-60 bg-primary p-2 -right-7 top-8 text-hover capitalize'
+          className='flex flex-row items-center justify-between gap-1 absolute w-60 bg-primary p-4 -right-7 top-8 text-hover capitalize'
         >
           <input
             type="text"
