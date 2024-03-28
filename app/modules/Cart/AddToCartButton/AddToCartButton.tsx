@@ -9,6 +9,7 @@ import LoginFirst from "../../Notifications/LoginFirst";
 
 type propsType = {
   product: ProductsTypes
+  productPage?: boolean,
 }
 
 export default function AddToCartButton(props: propsType) {
@@ -85,18 +86,18 @@ export default function AddToCartButton(props: propsType) {
       }
       {
         loading ?
-          <p className="uppercase font-medium text-black">
+          <p className={`uppercase font-medium  ${props.productPage ? "text-white" : "text-black"}"`}>
             {addingToCart}
           </p>
           :
           inList ?
-            <Link href="/cart" className="uppercase font-medium text-black" >
+            <Link href="/cart" className={`uppercase font-medium ${props.productPage ? "text-white" : "text-black"}`} >
               {viewCart}
             </Link>
             :
             <p
               onClick={() => addToCartList()}
-              className="text-hover hover:text-black hover:cursor-pointer uppercase font-medium  transition ease-in-out duration-300">
+              className={`text-hover ${props.productPage ? "hover:text-white" : "hover:text-black"} hover:cursor-pointer uppercase font-medium transition ease-in-out duration-300`}>
               {addToCart}
             </p>
       }

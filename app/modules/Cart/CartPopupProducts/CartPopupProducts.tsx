@@ -38,7 +38,7 @@ export default function CartPopupProducts(props: propsType) {
                     </div>
                     <div className="flex flex-col gap-1 item-start justify-start">
                       <span className="text-white hover:cursor-pointer">
-                        <Link href={`products/${product.id}`}>
+                        <Link href={`/products/${product.id}`}>
                           {product.title.slice(0, 10) + "..."}
                         </Link>
                       </span>

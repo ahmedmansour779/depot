@@ -44,7 +44,6 @@ export default function page() {
                     </div> :
                     <CartEmpty />
             }
-
             <Footer />
         </>
     )

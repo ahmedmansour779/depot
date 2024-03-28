@@ -47,8 +47,6 @@ export default function InputQuantityProductCart(props: propsType) {
     }
   };
 
-  // console.log(count);
-
   const quantityChange = async (countNumber: number) => {
     try {
       const url = `https://depot-data.onrender.com/users/${user.id}`

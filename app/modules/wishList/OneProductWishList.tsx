@@ -60,7 +60,6 @@ export default function OneProductWishList(props: typeProps) {
                         <DeleteWishlist product={props.product} />
                     </div>
                 </div>
-
             </div>
             <hr />
         </div>

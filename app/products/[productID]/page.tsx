@@ -44,7 +44,9 @@ export default async function page(props: { params: any }) {
                             </div>
                         </div>
                         <div className="text-hover">{product.description}</div>
-                        <AddToCart />
+                        test
+                        <AddToCart productPage={true} product={product} />
+                        test
                         <button className="flex flex-row items-center gap-4 mt-4 mb-14"><IconHeart style={{ display: "inline" }} size={18} /> ADD TO WISHLIST</button>
                         <div className="text-sm">
                             <div>SKU: 005</div>
