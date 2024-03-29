@@ -1,9 +1,9 @@
 import AddToCart from "@/app/modules/AddToCart";
 import Footer from "@/app/modules/Footer";
 import ProductCart from "@/app/modules/ProductCart";
-import AddToWishlist from "@/app/modules/productDetailsPage/AddToWishList/AddtoWishList";
 import { ProductsTypes } from "@/app/types";
 import Details from "./Details";
+import AddToWishlist from "@/app/modules/productDetailsPage/AddToWishlist/AddToWishlist";
 
 const ratingLength = [1, 2, 3, 4, 5];
 
