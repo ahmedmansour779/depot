@@ -2,8 +2,8 @@ import AddToCart from "@/app/modules/AddToCart";
 import Footer from "@/app/modules/Footer";
 import ProductCart from "@/app/modules/ProductCart";
 import { ProductsTypes } from "@/app/types";
+import AddToWishlist from "../../modules/productDetailsPage/AddToWishlist/AddToWishlist";
 import Details from "./Details";
-import AddToWishlist from "@/app/modules/productDetailsPage/AddToWishlist/AddToWishlist";
 
 const ratingLength = [1, 2, 3, 4, 5];
 
@@ -40,10 +40,11 @@ export default async function page(props: { params: any }) {
                   return (
                     <svg
                       key={rate}
-                      className={`w-4 h-4 ${rate <= product.rating.rate
+                      className={`w-4 h-4 ${
+                        rate <= product.rating.rate
                           ? "text-yellow-300"
                           : "text-gray-200"
-                        }`}
+                      }`}
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
