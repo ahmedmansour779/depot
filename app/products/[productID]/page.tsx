@@ -60,11 +60,7 @@ export default async function page(props: { params: any }) {
               </div>
             </div>
             <div className="text-hover">{product.description}</div>
-            <AddToCart
-              productID={productId}
-              productPage={true}
-              product={product}
-            />
+            <AddToCart productPage={true} product={product} />
             <AddToWishlist product={product} />
             <div className="text-sm">
               <div>SKU: 005</div>
