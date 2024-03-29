@@ -2,7 +2,6 @@ import AddToCart from "@/app/modules/AddToCart";
 import Footer from "@/app/modules/Footer";
 import ProductCart from "@/app/modules/ProductCart";
 import { ProductsTypes } from "@/app/types";
-import AddToWishlist from "../../modules/productDetailsPage/AddToWishlist/AddToWishlist";
 import Details from "./Details";
 
 const ratingLength = [1, 2, 3, 4, 5];
@@ -61,7 +60,7 @@ export default async function page(props: { params: any }) {
             </div>
             <div className="text-hover">{product.description}</div>
             <AddToCart productPage={true} product={product} />
-            <AddToWishlist product={product} />
+            {/* <AddToWishlist product={product} /> */}
             <div className="text-sm">
               <div>SKU: 005</div>
               <div>
